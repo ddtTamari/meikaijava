@@ -1,7 +1,7 @@
 /*
-  ‰‰K3|17@	0C1C2‚Ì‚¢‚¸‚ê‚©‚Ì’l‚Ì—”‚ğ¶¬A‚»‚Ì’l‚É‚æ‚Á‚ÄƒO[ƒ`ƒ‡ƒLƒp[‚¢‚¸‚ê‚©‚ğ•\¦‚³‚¹‚é
-  ‰‰K“ú		6Œ6“ú
-  »ìÒ		‹Ê—˜m”ü
+  æ¼”ç¿’3ï¼17ã€€	0ï¼Œ1ï¼Œ2ã®ã„ãšã‚Œã‹ã®å€¤ã®ä¹±æ•°ã‚’ç”Ÿæˆã€ãã®å€¤ã«ã‚ˆã£ã¦ã‚°ãƒ¼ãƒãƒ§ã‚­ãƒ‘ãƒ¼ã„ãšã‚Œã‹ã‚’è¡¨ç¤ºã•ã›ã‚‹
+  æ¼”ç¿’æ—¥		6æœˆ6æ—¥
+  è£½ä½œè€…		ç‰åˆ©ä»ç¾
  */
 package e_03_17;
 import java.util.Random;
@@ -10,13 +10,13 @@ public interface e_03_17 {
 	public static void main(String[] args){
 		Random rand = new Random();
 
-		//0`2‚Ì”š‚ğƒ‰ƒ“ƒ_ƒ€‚É¶¬
+		//0ï½2ã®æ•°å­—ã‚’ãƒ©ãƒ³ãƒ€ãƒ ã«ç”Ÿæˆ
 		int x = rand.nextInt(3);
-		//x‚Ì’l‚É‚æ‚Á‚ÄƒO[ƒ`ƒ‡ƒLƒp[‚Ì‚¢‚¸‚ê‚©‚ª•\¦‚³‚ê‚é
+		//xã®å€¤ã«ã‚ˆã£ã¦ã‚°ãƒ¼ãƒãƒ§ã‚­ãƒ‘ãƒ¼ã®ã„ãšã‚Œã‹ãŒè¡¨ç¤ºã•ã‚Œã‚‹
 		switch(x){
-		case 0 : System.out.print("ƒO["); 	break;
-		case 1 : System.out.print("ƒ`ƒ‡ƒL"); 	break;
-		case 2 : System.out.print("ƒp[");		break;
+		case 0 : System.out.print("ã‚°ãƒ¼"); 	break;
+		case 1 : System.out.print("ãƒãƒ§ã‚­"); 	break;
+		case 2 : System.out.print("ãƒ‘ãƒ¼");		break;
 		}
 	}
 

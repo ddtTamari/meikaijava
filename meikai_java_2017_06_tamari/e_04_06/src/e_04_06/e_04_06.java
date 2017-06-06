@@ -13,11 +13,11 @@ public interface e_04_06 {
 		int n = stdIn.nextInt();
 
 		int i = 0;
-		while(i < n){
-			System.out.print('*');
-			i++;
-		}
-		//System.out.println();
-	}
 
+			while(i < n && i > 0){
+				System.out.print('*');
+				i++ ;
+			}
+
+	}
 }
