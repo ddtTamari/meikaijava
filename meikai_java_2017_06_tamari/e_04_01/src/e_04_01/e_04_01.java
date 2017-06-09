@@ -1,7 +1,7 @@
 /*
-  ‰‰K4-1@		•„†‚Ì”»’è‚ğ‚·‚éƒvƒƒOƒ‰ƒ€‚ğ‰½“x‚Å‚àŒJ‚è•Ô‚µ‚Ä‚Å‚«‚é‚æ‚¤‚É
-  ‰‰K“ú		6Œ6“ú
-  »ìÒ		‹Ê—˜m”ü
+  æ¼”ç¿’4-1		ç¬¦å·ã®åˆ¤å®šã‚’ã™ã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’ä½•åº¦ã§ã‚‚ç¹°ã‚Šè¿”ã—ã¦ã§ãã‚‹ã‚ˆã†ã«
+  æ¼”ç¿’æ—¥		6æœˆ6æ—¥
+  è£½ä½œè€…		ç‰åˆ©ä»ç¾
  */
 package e_04_01;
 
@@ -11,21 +11,22 @@ public interface e_04_01 {
 		Scanner stdIn = new Scanner(System.in);
 
 		int retry;
-		//retry‚ª1‚ÌŠÔŒJ‚è•Ô‚·
+		//retryãŒ1ã®é–“ç¹°ã‚Šè¿”ã™
 		do{
-			//®”‚Ì“ü—Í‚ğƒL[ƒ{[ƒh‚Ås‚¤
-			System.out.print("®”’lF");		int n = stdIn.nextInt();
-			//n‚ª0‚æ‚è‘å‚«‚¢‚Æ‚«A’l‚Í³‚Æ•\¦
-			if(n > 0)	System.out.println("‚»‚Ì’l‚Í³‚Å‚·B");
-			//n‚ª0‚æ‚è¬‚³‚¢‚Æ‚«A’l‚Í•‰‚Æ•\¦
-			else if(n < 0)	System.out.println("‚»‚Ì’l‚Í•‰‚Å‚·B");
-			//n‚ª‚»‚êˆÈŠO‚ÌA‚»‚Ì’l‚Í0‚Æ•\¦
-			else System.out.println("‚»‚Ì’l‚Í0‚Å‚·B");
-			//retry‚É1‚ğ‘ã“ü
+			//æ•´æ•°ã®å…¥åŠ›ã‚’ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã§è¡Œã†
+			System.out.print("æ•´æ•°å€¤ï¼š");		int n = stdIn.nextInt();
+			//nãŒ0ã‚ˆã‚Šå¤§ãã„ã¨ãã€å€¤ã¯æ­£ã¨è¡¨ç¤º
+			if(n > 0)	System.out.println("ãã®å€¤ã¯æ­£ã§ã™ã€‚");
+			//nãŒ0ã‚ˆã‚Šå°ã•ã„ã¨ãã€å€¤ã¯è² ã¨è¡¨ç¤º
+			else if(n < 0)	System.out.println("ãã®å€¤ã¯è² ã§ã™ã€‚");
+			//nãŒãã‚Œä»¥å¤–ã®æ™‚ã€ãã®å€¤ã¯0ã¨è¡¨ç¤º
+			else System.out.println("ãã®å€¤ã¯0ã§ã™ã€‚");
+			//retryã«1ã‚’ä»£å…¥
 			retry = 1;
-			//System.out.print("‚à‚¤ˆê“xH@1...yes/0...no");
+			//System.out.print("ã‚‚ã†ä¸€åº¦ï¼Ÿã€€1...yes/0...no");
 			//retry = stdIn.nextInt();
 		}while(retry == 1);
 
 	}
 }
+

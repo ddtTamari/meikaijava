@@ -1,7 +1,7 @@
 /*
-  ‰‰K4-12@	³‚Ì®”’l‚ð0‚Ü‚ÅƒJƒEƒ“ƒgƒAƒbƒv‚·‚éƒvƒƒOƒ‰ƒ€‚ðfor•ª‚ðŽg‚Á‚Äì¬
-  ‰‰K“ú		6ŒŽ6“ú
-  »ìŽÒ		‹Ê—˜m”ü
+  æ¼”ç¿’4-12		æ­£ã®æ•´æ•°å€¤ã‚’0ã¾ã§ã‚«ã‚¦ãƒ³ãƒˆã‚¢ãƒƒãƒ—ã™ã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’foråˆ†ã‚’ä½¿ã£ã¦ä½œæˆ
+  æ¼”ç¿’æ—¥		6æœˆ6æ—¥
+  è£½ä½œè€…		çŽ‰åˆ©ä»ç¾Ž
  */
 package e_04_12;
 
@@ -12,13 +12,13 @@ public interface e_04_12 {
 		Scanner stdIn = new Scanner(System.in);
 
 		int x;
-		//³‚Ì’l‚µ‚©“ü—Í‚Å‚«‚È‚¢‚æ‚¤‚É‚·‚é
+		//æ­£ã®å€¤ã—ã‹å…¥åŠ›ã§ããªã„ã‚ˆã†ã«ã™ã‚‹
 		do{
-			System.out.print("³‚Ì®”’lF");	 x= stdIn.nextInt();
+			System.out.print("æ­£ã®æ•´æ•°å€¤ï¼š");	 x= stdIn.nextInt();
 		}while(x <= 0);
-		//i‚É0‚ð‘ã“üAi‚ªúIˆÈ‰º‚ÌŠÔŒJ‚è•Ô‚·Ai‚Í1‚¸‚Â‘‚â‚µ‚Ä‚¢‚­
+		//iã«0ã‚’ä»£å…¥ã€iãŒâ…¹ä»¥ä¸‹ã®é–“ç¹°ã‚Šè¿”ã™ã€iã¯1ãšã¤å¢—ã‚„ã—ã¦ã„ã
 		for(int i = 0; i <= x ; i ++ ){
-			//i‚ð•\Ž¦
+			//iã‚’è¡¨ç¤º
 			System.out.println(i);
 
 		}

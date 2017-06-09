@@ -1,27 +1,27 @@
 /*
-  ‰‰K4-13@	³‚Ì®”’l‚ğ0‚Ü‚ÅƒJƒEƒ“ƒgƒAƒbƒv‚·‚éƒvƒƒOƒ‰ƒ€‚ğfor•ª‚ğg‚Á‚Äì¬
-  ‰‰K“ú		6Œ6“ú
-  »ìÒ		‹Ê—˜m”ü
+  æ¼”ç¿’4-13		æ­£ã®æ•´æ•°å€¤ã‚’0ã¾ã§ã‚«ã‚¦ãƒ³ãƒˆã‚¢ãƒƒãƒ—ã™ã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’foråˆ†ã‚’ä½¿ã£ã¦ä½œæˆ
+  æ¼”ç¿’æ—¥		6æœˆ6æ—¥
+  è£½ä½œè€…		ç‰åˆ©ä»ç¾
  */
 package e_04_13;
 import java.util.Scanner;
 public interface e_04_13 {
 	public static void main(String[] args){
 		Scanner stdIn = new Scanner(System.in);
-		int n;	//”CˆÓ‚Ì’l
+		int n;	//ä»»æ„ã®å€¤
 
-		//³‚Ì’l‚ª“ü—Í‚³‚ê‚é‚Ü‚ÅŒJ‚è•Ô‚·
+		//æ­£ã®å€¤ãŒå…¥åŠ›ã•ã‚Œã‚‹ã¾ã§ç¹°ã‚Šè¿”ã™
 		do{
-			System.out.print("n‚Ì’lF");
+			System.out.print("nã®å€¤ï¼š");
 			n= stdIn.nextInt();
 		}while(n <= 0);
 
-		int sum =0;	//‡Œv
-		//i‚ª‚‚ğ’´‚¦‚é‚Ü‚Åi‚ğ‘«‚µ‚Ä‚¢‚­
+		int sum =0;	//åˆè¨ˆ
+		//iãŒï½ã‚’è¶…ãˆã‚‹ã¾ã§iã‚’è¶³ã—ã¦ã„ã
 		for(int i = 0 ; i <= n ;i++ ){
 			sum += i;
 		}
-		//‡Œv‚ğ•\¦‚·‚é
+		//åˆè¨ˆã‚’è¡¨ç¤ºã™ã‚‹
 		System.out.println(sum);
 
 	}

@@ -11,7 +11,7 @@ public interface e_01_01 {
 		public static void main (String[] args){
 
 		//こんにちはと表示する
-		System.out.println("こんにちは");
+		System.out.println("こんにちは")
 
 		}
 	}

@@ -1,7 +1,7 @@
 /*
-  ‰‰K4-1@		10~99‚Ì”“–‚ÄƒQ[ƒ€‚ð»ì
-  ‰‰K“ú		6ŒŽ6“ú
-  »ìŽÒ		‹Ê—˜m”ü
+  æ¼”ç¿’4-2		10~99ã®æ•°å½“ã¦ã‚²ãƒ¼ãƒ ã‚’è£½ä½œ
+  æ¼”ç¿’æ—¥		6æœˆ6æ—¥
+  è£½ä½œè€…		çŽ‰åˆ©ä»ç¾Ž
  */
 package e_04_02;
 import java.util.Random;
@@ -12,24 +12,25 @@ public interface e_04_02 {
 		Scanner stdIn = new Scanner(System.in);
 		Random rand = new Random();
 
-		//10~99‚Ì”Žš‚ðƒ‰ƒ“ƒ_ƒ€‚ÉÝ’è
+		//10~99ã®æ•°å­—ã‚’ãƒ©ãƒ³ãƒ€ãƒ ã«è¨­å®š
 		int no = rand.nextInt(90) + 10;
-		System.out.println("”“–‚ÄƒQ[ƒ€ŠJŽnII");
-		System.out.println("10`99‚Ì”‚ð“–‚Ä‚Ä‚­‚¾‚³‚¢B");
+		System.out.println("æ•°å½“ã¦ã‚²ãƒ¼ãƒ é–‹å§‹ï¼ï¼");
+		System.out.println("10ï½ž99ã®æ•°ã‚’å½“ã¦ã¦ãã ã•ã„ã€‚");
 
 		int x ;
 		do {
-			System.out.println("‚¢‚­‚Â‚©‚ÈH");
-			//x‚Ì’l‚ðƒL[ƒ{[ƒh‚©‚ç“ü—Í
+			System.out.println("ã„ãã¤ã‹ãªï¼Ÿ");
+			//xã®å€¤ã‚’ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã‹ã‚‰å…¥åŠ›
 			x= stdIn.nextInt();
 
-			//‚à‚µ“ü—Í‚µ‚½”Žš‚ª“š‚¦‚æ‚è¬‚³‚©‚Á‚½‚çA¬‚³‚¢”Žš‚Å‚·‚Æ•\Ž¦
-			if(x > no) System.out.println("‚à‚Á‚Æ¬‚³‚È”Žš‚Å‚·B");
-			//‚à‚µ“ü—Í‚µ‚½”Žš‚ª“š‚¦‚æ‚è‘å‚«‚©‚Á‚½‚çA‘å‚«‚¢”Žš‚Å‚·‚Æ•\Ž¦
-			else if(x < no) System.out.println("‚à‚Á‚Æ‘å‚«‚È”Žš‚Å‚·B");
-		}while (x != no); //“ü—Í‚µ‚½”Žš‚ª“š‚¦‚Æ“¯‚¶‚É‚È‚é‚Ü‚ÅŒJ‚è•Ô‚·
-		//“š‚¦‚Æ”Žš‚ªˆê‚Ìê‡A³‰ð‚Å‚·‚Æ•\Ž¦
-		System.out.println("³‰ð‚Å‚·B");
+			//ã‚‚ã—å…¥åŠ›ã—ãŸæ•°å­—ãŒç­”ãˆã‚ˆã‚Šå°ã•ã‹ã£ãŸã‚‰ã€å°ã•ã„æ•°å­—ã§ã™ã¨è¡¨ç¤º
+			if(x > no) System.out.println("ã‚‚ã£ã¨å°ã•ãªæ•°å­—ã§ã™ã€‚");
+			//ã‚‚ã—å…¥åŠ›ã—ãŸæ•°å­—ãŒç­”ãˆã‚ˆã‚Šå¤§ãã‹ã£ãŸã‚‰ã€å¤§ãã„æ•°å­—ã§ã™ã¨è¡¨ç¤º
+			else if(x < no) System.out.println("ã‚‚ã£ã¨å¤§ããªæ•°å­—ã§ã™ã€‚");
+		}while (x != no); //å…¥åŠ›ã—ãŸæ•°å­—ãŒç­”ãˆã¨åŒã˜ã«ãªã‚‹ã¾ã§ç¹°ã‚Šè¿”ã™
+		//ç­”ãˆã¨æ•°å­—ãŒä¸€ç·’ã®å ´åˆã€æ­£è§£ã§ã™ã¨è¡¨ç¤º
+		System.out.println("æ­£è§£ã§ã™ã€‚");
 	}
 
 }
+

@@ -1,7 +1,7 @@
 /*
-  ‰‰K4-3@		2‚Â‚Ì®”’l‚ÌŠÔ‚Ì”‚ğ¬‚³‚¢‚Ù‚¤‚©‚ç‡‚É•\¦‚·‚éƒvƒƒOƒ‰ƒ€‚ğì‚é
-  ‰‰K“ú		6Œ6“ú
-  »ìÒ		‹Ê—˜m”ü
+  æ¼”ç¿’4-3ã€€		2ã¤ã®æ•´æ•°å€¤ã®é–“ã®æ•°ã‚’å°ã•ã„ã»ã†ã‹ã‚‰é †ã«è¡¨ç¤ºã™ã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’ä½œã‚‹
+  æ¼”ç¿’æ—¥		6æœˆ6æ—¥
+  è£½ä½œè€…		ç‰åˆ©ä»ç¾
  */
 package e_04_03;
 import java.util.Scanner;
@@ -9,10 +9,10 @@ public interface e_04_03 {
 	public static void main(String[] args){
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("®”A:"); int a = stdIn.nextInt();
-		System.out.print("®”B:"); int b = stdIn.nextInt();
+		System.out.print("æ•´æ•°A:"); int a = stdIn.nextInt();
+		System.out.print("æ•´æ•°B:"); int b = stdIn.nextInt();
 
-		//a‚Æb‚Ì‚Ç‚¿‚ç‚ª‘å‚«‚¢‚©‚ğŠm‚©‚ß‚é
+		//aã¨bã®ã©ã¡ã‚‰ãŒå¤§ãã„ã‹ã‚’ç¢ºã‹ã‚ã‚‹
 		int min, max;
 		if (a > b){
 			max = a;
@@ -21,7 +21,7 @@ public interface e_04_03 {
 			min =a;
 			max =b;
 		}
-		//Å‘å’l‚Ì’l‚É‚È‚é‚Ü‚ÅÅ¬’l‚É1‚¸‚Â‘«‚µ‚Ä‚¢‚­
+		//æœ€å¤§å€¤ã®å€¤ã«ãªã‚‹ã¾ã§æœ€å°å€¤ã«1ãšã¤è¶³ã—ã¦ã„ã
 		do{
 			System.out.println(min);
 			min ++;
