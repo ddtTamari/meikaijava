@@ -5,13 +5,13 @@
  */
 package e_05_03;
 
-public interface e_05_03 {
-	public static void main(String[] args){
+public class e_05_03 {
+	public static void main(String[] args) {
 
-		//論理型の変数xにtrueを代入
+		// 論理型の変数xにtrueを代入
 		boolean x = true;
 
-		//変数xを表示
+		// 変数xを表示
 		System.out.print(x);
 	}
 }

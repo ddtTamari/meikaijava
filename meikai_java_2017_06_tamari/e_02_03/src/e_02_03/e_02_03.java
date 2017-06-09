@@ -5,24 +5,21 @@
 
 */
 package e_02_03;
+
 import java.util.Scanner;
 
-public interface e_02_03 {
-		public static void main(String[] args){
-			Scanner stdIn = new Scanner(System.in);
+public class e_02_03 {
+	public static void main(String[] args) {
+		Scanner stdIn = new Scanner(System.in);
 
-			//整数値の入力を促す
-			System.out.print("整数値：");
+		// 整数値の入力を促す
+		System.out.print("整数値：");
 
-			//変数ｘにキーボードから読み込んだ数字を入れる
-			int x = stdIn.nextInt();
+		// 変数ｘにキーボードから読み込んだ数字を入れる
+		int x = stdIn.nextInt();
 
-			//入力した数字をそのまま返す
-			System.out.println(x+"と入力しましたね。");
+		// 入力した数字をそのまま返す
+		System.out.println(x + "と入力しましたね。");
 
-
-		}
 	}
-
-
-
+}

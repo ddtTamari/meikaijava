@@ -5,7 +5,7 @@
  */
 package e_04_09;
 import java.util.Scanner;
-public interface e_04_09 {
+public class e_04_09 {
 	public static void main(String[] args){
 		Scanner stdIn = new Scanner(System.in);
 

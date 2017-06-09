@@ -8,10 +8,11 @@
 
 package e_01_02;
 
-public interface e_01_02 {
+public class e_01_02 {
 
-	public static void main(String[] args){
-		//\nを使って一文字ごとに改行して名前を表示
+	public static void main(String[] args) {
+		// \nを使って一文字ごとに改行して名前を表示
+
 		System.out.println("玉\n利\n仁\n美");
 	}
 }

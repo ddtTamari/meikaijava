@@ -7,30 +7,30 @@ package e_05_05;
 
 import java.util.Scanner;
 
-public interface e_05_05 {
-	public static void main(String[] args){
+public class e_05_05 {
+	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		//整数値xの入力を促す
+		// 整数値xの入力を促す
 		System.out.print("整数値x：");
-		//xの値をキーボードから取得
+		// xの値をキーボードから取得
 		int x = stdIn.nextInt();
-		//整数値yの入力を促す
+		// 整数値yの入力を促す
 		System.out.print("整数値y：");
-		//yの値をキーボードから取得
+		// yの値をキーボードから取得
 		int y = stdIn.nextInt();
-		//整数値zの入力を促す
+		// 整数値zの入力を促す
 		System.out.print("整数値z：");
-		//zの値をキーボードから取得
+		// zの値をキーボードから取得
 		int z = stdIn.nextInt();
 
-		//合計を求める
+		// 合計を求める
 		int sum = x + y + z;
-		//合計値を表示
+		// 合計値を表示
 		System.out.println("xとyとzの合計は" + sum);
-		//平均を求める、その際キャスト演算子をを利用
-		double ave = (double)(x + y + z) / 3;
-		//平均値を表示
+		// 平均を求める、その際キャスト演算子をを利用
+		double ave = (double) (x + y + z) / 3;
+		// 平均値を表示
 		System.out.println("xとyとzの平均は" + ave);
 
 	}

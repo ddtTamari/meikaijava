@@ -5,30 +5,27 @@
  */
 package e_06_03;
 
-public interface e_06_03 {
+public class e_06_03 {
 
-	public static void main(String[] args){
+	public static void main(String[] args) {
 		double[] a = new double[5];
 
+		// 失敗作
+		/*
+		 * for(int i = 0; i < 5; i++){ a[i] =(i * 1.1) + 1.1;
+		 * System.out.println("a[" + i + "] =" + a[i]); }
+		 */
 
-		//失敗作
-		/*	for(int i = 0; i < 5; i++){
-				a[i] =(i * 1.1) + 1.1;
-				System.out.println("a[" + i + "] =" + a[i]);
-			}
-		*/
+		// 5回繰り返す
+		for (int i = 0; i < 5; i++) {
+			// double型のため10進整数でピッタリ表現するこてはできないので
+			// 何回目かをint型で作っておく
+			int j = i + 1;
+			// 回数×11で先に求める値の倍を出して置き、その後10で割り小数点以下を正しく表示する
+			double t = (double) (j * 11) / 10;
+			// 結果を表示
+			System.out.println("a[" + i + "] =" + t);
 
-
-			//5回繰り返す
-			for(int i =0; i < 5 ;i++){
-				//double型のため10進整数でピッタリ表現するこてはできないので
-				//何回目かをint型で作っておく
-				int j = i + 1;
-				//回数×11で先に求める値の倍を出して置き、その後10で割り小数点以下を正しく表示する
-				double t = (double)(j *11)/10;
-				//結果を表示
-				System.out.println("a["+i+ "] =" + t);
-
-			}
+		}
 	}
 }

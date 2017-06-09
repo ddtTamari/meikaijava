@@ -5,22 +5,24 @@
 
 */
 package e_02_10;
+
 import java.util.Scanner;
-public interface e_02_10 {
-	public static void main(String[] args){
+
+public class e_02_10 {
+	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		//姓の入力を促す
+		// 姓の入力を促す
 		System.out.print("姓：");
-		//string型の変数にキーボードから入力された文字列を代入
+		// string型の変数にキーボードから入力された文字列を代入
 		String s = stdIn.next();
-		//名の入力を促す
+		// 名の入力を促す
 		System.out.print("名：");
-		//string型の変数にキーボードから入力された文字列を代入
+		// string型の変数にキーボードから入力された文字列を代入
 		String n = stdIn.next();
 
-		//代入されたs,nを表示する
-		System.out.println("こんにちは"+ s + n +"さん。");
+		// 代入されたs,nを表示する
+		System.out.println("こんにちは" + s + n + "さん。");
 
 	}
 

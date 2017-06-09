@@ -5,18 +5,18 @@
  */
 package e_06_02;
 
-public interface e_06_02 {
+public class e_06_02 {
 
-	public static void main(String[] args){
-		//int型の要素数が5つある配列を生成
+	public static void main(String[] args) {
+		// int型の要素数が5つある配列を生成
 		int[] a = new int[5];
 
-		//要素数の数の分だけ繰り返す
-		for(int i = 0; i < a.length ; i++){
-			//要素の中に要素数-iの値を代入
-			a[i] = a.length -i;
-			//各要素の値を表示
-			System.out.println("a[" + i + "] = " +  a[i]);
+		// 要素数の数の分だけ繰り返す
+		for (int i = 0; i < a.length; i++) {
+			// 要素の中に要素数-iの値を代入
+			a[i] = a.length - i;
+			// 各要素の値を表示
+			System.out.println("a[" + i + "] = " + a[i]);
 		}
 	}
 

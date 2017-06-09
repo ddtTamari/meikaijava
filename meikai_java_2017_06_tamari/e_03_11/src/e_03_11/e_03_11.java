@@ -7,27 +7,27 @@
 
 import java.util.Scanner;
 
-public interface e_03_11 {
-	public static void main(String[] args){
+public class e_03_11 {
+	public static void main(String[] args) {
 
 		Scanner stdIn = new Scanner(System.in);
 
-		//実数aの入力を促す
+		// 実数aの入力を促す
 		System.out.print("実数a:");
-		//aをキーボードから入力
+		// aをキーボードから入力
 		int a = stdIn.nextInt();
-		//実数bの入力を促す
+		// 実数bの入力を促す
 		System.out.print("実数b：");
-		//bをキーボードから入力
+		// bをキーボードから入力
 		int b = stdIn.nextInt();
 
-		//2つの整数値の差を求める
+		// 2つの整数値の差を求める
 		int x = a - b;
 
-		//差が10以下の時、それらの差が10以下と表示
-		if(x <= 10 )
+		// 差が10以下の時、それらの差が10以下と表示
+		if (x <= 10)
 			System.out.println("それらの差は10以下です。");
-		//それ以外の時、それらの差は11以上と表示
+		// それ以外の時、それらの差は11以上と表示
 		else
 			System.out.println("それらの差は11以上です。");
 	}

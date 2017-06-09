@@ -4,26 +4,28 @@
   製作者		玉利仁美
  */
 package e_05_02;
+
 import java.util.Scanner;
-public interface e_05_02 {
 
-	public static void main(String[] args){
-		Scanner stdIn = new Scanner (System.in);
+public class e_05_02 {
 
-		//変数xはfloat型で表される、変数yはdouble型で表示される
+	public static void main(String[] args) {
+		Scanner stdIn = new Scanner(System.in);
+
+		// 変数xはfloat型で表される、変数yはdouble型で表示される
 		System.out.println("変数xはfloat型で、変数yはdouble型です。");
-		//変数xの入力を促す
+		// 変数xの入力を促す
 		System.out.print("x：");
-		//変数xの値をキーボードから取得
+		// 変数xの値をキーボードから取得
 		float x = stdIn.nextFloat();
-		//変数yの入力を促す
+		// 変数yの入力を促す
 		System.out.print("y：");
-		//変数yの値をキーボードから取得
+		// 変数yの値をキーボードから取得
 		double y = stdIn.nextDouble();
 
-		//float型の変数xを表示
+		// float型の変数xを表示
 		System.out.println("x = " + x);
-		//double型の変数ｙを表示
+		// double型の変数ｙを表示
 		System.out.println("y = " + y);
 
 	}

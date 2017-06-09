@@ -6,34 +6,34 @@
 
 import java.util.Scanner;
 
-public interface e_04_14 {
-	public static void main(String[] args){
+public class e_04_14 {
+	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
-		int n;	//任意の値
+		int n; // 任意の値
 
-		//正の値が入力されるまで繰り返す
-		do{
+		// 正の値が入力されるまで繰り返す
+		do {
 			System.out.print("nの値：");
-			n= stdIn.nextInt();
-		}while(n <= 0);
+			n = stdIn.nextInt();
+		} while (n <= 0);
 
-		int sum =0;	//合計
-		//iがｎを超えるまでiを足していく
-		for(int i = 0 ; i <= n ;i++ ){
-			//合計にiを足していく
+		int sum = 0; // 合計
+		// iがｎを超えるまでiを足していく
+		for (int i = 0; i <= n; i++) {
+			// 合計にiを足していく
 			sum += i;
-			//iがnより小さく、iが0ではないとき
-			if(i < n && i !=0){
-				//i＋を表示
+			// iがnより小さく、iが0ではないとき
+			if (i < n && i != 0) {
+				// i＋を表示
 				System.out.print(i + "+");
-			//iがnの時
-			}else if(i == n){
-				//iを表示
+				// iがnの時
+			} else if (i == n) {
+				// iを表示
 				System.out.print(i);
 
 			}
 		}
-		//合計を表示する
+		// 合計を表示する
 		System.out.print("=" + sum);
 
 	}

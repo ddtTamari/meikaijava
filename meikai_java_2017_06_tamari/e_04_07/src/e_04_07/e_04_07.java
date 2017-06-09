@@ -7,25 +7,25 @@ package e_04_07;
 
 import java.util.Scanner;
 
-public interface e_04_07 {
-	public static void main(String[] args){
+public class e_04_07 {
+	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
 		System.out.print("何個*を表示しますか：");
 		int n = stdIn.nextInt();
 
 		int i = 0;
-		//入力されたnよりiが小さいとき繰り返す
-		while(i < n){
-			//iが偶数の時*を表示
-			if(i%2 == 0)
-			System.out.print('*');
-			//それ以外の時+を表示
+		// 入力されたnよりiが小さいとき繰り返す
+		while (i < n) {
+			// iが偶数の時*を表示
+			if (i % 2 == 0)
+				System.out.print('*');
+			// それ以外の時+を表示
 			else
-			System.out.print('+');
-			//iを一つずつ増加
+				System.out.print('+');
+			// iを一つずつ増加
 			i++;
 		}
-		//System.out.println();
+		// System.out.println();
 	}
 }

@@ -5,31 +5,35 @@
 
 */
 package e_03_12;
-import java.util.Scanner;
-public interface e_03_12 {
 
-	public static void main(String[] args){
+import java.util.Scanner;
+
+public class e_03_12 {
+
+	public static void main(String[] args) {
 
 		Scanner stdIn = new Scanner(System.in);
 
-		//整数値aをキーボードから入力
-		System.out.print("整数値a:"); int a = stdIn.nextInt();
-		//整数値bをキーボードから入力
-		System.out.print("整数値b："); int b = stdIn.nextInt();
-		//整数値cをキーボードから入力
-		System.out.print("整数値c："); int c = stdIn.nextInt();
+		// 整数値aをキーボードから入力
+		System.out.print("整数値a:");
+		int a = stdIn.nextInt();
+		// 整数値bをキーボードから入力
+		System.out.print("整数値b：");
+		int b = stdIn.nextInt();
+		// 整数値cをキーボードから入力
+		System.out.print("整数値c：");
+		int c = stdIn.nextInt();
 
+		int min = a; // 最初にminにaを代入
+		// もしbがminより小さければminの値にbを代入
+		if (b < min)
+			min = b;
+		// もしcがminより小さければminの値にcを代入
+		if (c < min)
+			min = c;
 
-		int min = a;	//最初にminにaを代入
-		//もしbがminより小さければminの値にbを代入
-		if(b < min)		min = b;
-		//もしcがminより小さければminの値にcを代入
-		if(c < min)		min = c;
-
-		//minの値を表示
+		// minの値を表示
 		System.out.println("min=" + min);
 	}
-
-
 
 }

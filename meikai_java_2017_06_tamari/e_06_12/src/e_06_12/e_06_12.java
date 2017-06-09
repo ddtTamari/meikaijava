@@ -4,19 +4,18 @@
   製作者		玉利仁美
  */
 package e_06_12;
+
 import java.util.Random;
 import java.util.Scanner;
-public interface e_06_12 {
 
-	public static void main(String[] args){
+public class e_06_12 {
+
+	public static void main(String[] args) {
 		Random rand = new Random();
 		Scanner stdIn = new Scanner(System.in);
 
 		final int n = 5;
 		int[] a = new int[n];
-
-
-
 
 	}
 }

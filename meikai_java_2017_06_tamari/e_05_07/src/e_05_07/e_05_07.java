@@ -5,22 +5,22 @@
  */
 package e_05_07;
 
-public interface e_05_07 {
-	public static void main(String[] args){
+public class e_05_07 {
+	public static void main(String[] args) {
 
-		//どちらが値なのか2乗なのかを表示
+		// どちらが値なのか2乗なのかを表示
 		System.out.println("   値　　　 値の2乗");
-		//実数値と文字を区切る
+		// 実数値と文字を区切る
 		System.out.println("--------------------");
 
-		//1000回繰り返す
-		for(int i = 0; i<=1000 ; i ++){
-			//0,001になるようにiを1000で割る
-			float x = (float)i /1000;
-			//2乗を求める
-			float y = x * x ;
-			//最低でも小数点第7までxとyの値を表示
-			System.out.printf("%1.7f  %1.7f\n" , x, y );
+		// 1000回繰り返す
+		for (int i = 0; i <= 1000; i++) {
+			// 0,001になるようにiを1000で割る
+			float x = (float) i / 1000;
+			// 2乗を求める
+			float y = x * x;
+			// 最低でも小数点第7までxとyの値を表示
+			System.out.printf("%1.7f  %1.7f\n", x, y);
 		}
 	}
 }

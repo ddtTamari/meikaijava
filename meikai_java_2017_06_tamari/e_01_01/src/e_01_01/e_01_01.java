@@ -6,18 +6,15 @@
 */
 package e_01_01;
 
-public interface e_01_01 {
-	class HowAreYou1{
-		public static void main (String[] args){
+public class e_01_01 {
+	public static void main(String[] args) {
 
-		//こんにちはと表示する
-		System.out.println("こんにちは")
+		// こんにちはと表示する
+		System.out.println("こんにちは");
 
-		}
 	}
 }
 
 /*
-構文エラーがありますと表示されエラーを起こしているところにバツ印が付き
-正しく実行されない。
-*/
+ * 構文エラーがありますと表示されエラーを起こしているところにバツ印が付き 正しく実行されない。
+ */

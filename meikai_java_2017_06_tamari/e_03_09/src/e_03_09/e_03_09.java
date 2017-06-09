@@ -5,24 +5,25 @@
 
 */
 package e_03_09;
+
 import java.util.Scanner;
 
-public interface e_03_09 {
-	public static void main(String[] args){
-			Scanner stdIn = new Scanner(System.in);
+public class e_03_09 {
+	public static void main(String[] args) {
+		Scanner stdIn = new Scanner(System.in);
 
-			//整数aの入力を促す
-			System.out.print("実数a:");
-			//整数aをキーボードから入力
-			double a = stdIn.nextDouble();
-			//整数aの入力を促す
-			System.out.print("実数b:");
-			//整数aをキーボードから入力
-			double b = stdIn.nextDouble();
+		// 整数aの入力を促す
+		System.out.print("実数a:");
+		// 整数aをキーボードから入力
+		double a = stdIn.nextDouble();
+		// 整数aの入力を促す
+		System.out.print("実数b:");
+		// 整数aをキーボードから入力
+		double b = stdIn.nextDouble();
 
-			//整数aと整数bを比べてaが大きいならaをbが大きいならｂがmaxとして表示する
-			double max = a > b ? a : b;
-			System.out.println(max);
+		// 整数aと整数bを比べてaが大きいならaをbが大きいならｂがmaxとして表示する
+		double max = a > b ? a : b;
+		System.out.println(max);
 	}
 
 }
