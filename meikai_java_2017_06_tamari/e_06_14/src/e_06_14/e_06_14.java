@@ -1,6 +1,6 @@
 /*
-  演習6-14		月を1～12の数値として表示、その英語表現を入力させる英単語学習プログラムの作成
-  				・出題する月はランダムに・学習社が望む限り何度でも繰り返す・同一月を連続して出さない
+  演習6-15		月を1～12の数値として表示。英語表現を入力させるプログラム
+  				月は乱数で生成・何度も繰り返しできる・同一月を連続して出題しない
   演習日		6月9日
   製作者		玉利仁美
  */
@@ -14,11 +14,11 @@ public class e_06_14 {
 		Random rand = new Random();
 		Scanner stdIn = new Scanner(System.in);
 
-		String[] monthAnswer = { "January", "February", "March", "April", "May", "Jun", "July", "August", "September",
+		String[] monthAnswer = { "January", "February", "March", "April", "May", "June", "July", "August", "September",
 				"Octorber", "November", "December" };
 		int monthQue;
 		int retry = 1;
-		int question=0;
+		int question = 0;
 		String Answer;
 		System.out.print("英語の月名を入力してください。\nなお、先頭は大文字で、2文字目以降は小文字とします。\n");
 
@@ -26,14 +26,16 @@ public class e_06_14 {
 			do {
 				monthQue = rand.nextInt(12);
 
-			}while(monthQue == question);
-			System.out.print(monthQue + 1 + "月：");
+			} while (monthQue == question);
+			System.out.print(monthQue + 1 +"月：");
 			Answer = stdIn.next();
 			question = monthQue;
+
 			if (Answer.equals(monthAnswer[monthQue])) {
 				// System.out.println(monthAnswer[monthQue]);
 				System.out.println("正解です。");
 			} else if (Answer.equals(monthAnswer[monthQue]) == false) {
+				// System.out.println(monthAnswer[monthQue]);
 				System.out.println("違います。");
 			}
 
