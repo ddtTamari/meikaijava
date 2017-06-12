@@ -16,6 +16,28 @@ public class e_06_12 {
 
 		final int n = 5;
 		int[] a = new int[n];
+		int random = 0;
+		for (int i = 0; i < n; i++) {
+			random = rand.nextInt(10);
+			a[i] = random;
+
+		}
+
+		for (int i = 0; i < n; i++) {
+			i = rand.nextInt(n);
+
+				Outer: while (true) {
+					int random2 = rand.nextInt(n);
+					for (int j = 0; j < i; j++) {
+						if (i == random2) {
+							continue Outer;
+						}
+					}
+					System.out.println("a[" + i + "] = " + a[i]);
+					break Outer;
+
+			}
+		}
 
 	}
 }
