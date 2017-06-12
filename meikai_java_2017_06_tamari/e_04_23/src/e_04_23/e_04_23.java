@@ -17,20 +17,23 @@ public class e_04_23 {
 		int n = stdIn.nextInt();
 
 		// ｎ回繰り返す
-		for (int i = 1; i <= n; i++) {
+		for (int i = 0; i < n; i++) {
 
 			// n-1回空白を生成する
-			for (int j = 1; j <= n - i; j++) {
+			for (int j = 0; j < n - i; j++) {
 				// 空白を生成
 				System.out.print(" ");
 			}
-			// (i-1)*2+1個*を生成する
-			for (int t = 1; t <= (i - 1) * 2 + 1; t++) {
-				// i回目を表示する
-				System.out.print(i);
+			//(i-1)*2+1回、iを10で割った剰余の数字を表示する
+			for (int t = 0; t < (i - 1) * 2 + 1; t++) {
+				// iを10で割った剰余を表示する
+				System.out.print(i % 10);
+
 			}
-			// 空白を生成する
+
+			// 改行を生成する
 			System.out.println();
+
 		}
 
 	}
