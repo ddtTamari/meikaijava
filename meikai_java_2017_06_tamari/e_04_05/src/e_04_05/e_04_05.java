@@ -18,10 +18,10 @@ public class e_04_05 {
 			x = stdIn.nextInt();
 		} while (x <= 0);
 
-		while (x >= 0)
+		while (x >= 0) {
 			// System.out.println(x--);
 			System.out.println(--x);
-
+		}
 	}
 
 }
