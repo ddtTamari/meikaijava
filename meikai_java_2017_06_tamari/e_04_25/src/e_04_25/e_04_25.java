@@ -19,7 +19,7 @@ public class e_04_25 {
 		int n = stdIn.nextInt();
 
 		int sum = 0; // 合計
-		int ave = 0; // 平均
+		double average = 0; // 平均
 
 		// n回繰り返す
 		for (int i = 1; i <= n; i++) {
@@ -33,20 +33,13 @@ public class e_04_25 {
 			// tの値を加える
 			sum += t;
 			// 合計を繰り返した回数で割る
-			ave = sum / i;
+			average = sum / i;
 		}
 
-		/*
-		 * //ｎ回繰り返す for(int i = 1; i <= n ; i++){ //整数の入力を促す
-		 * System.out.print("整数："); //整数をキーボードから取得 int t= stdIn.nextInt();
-		 * //もし合計が1000を超えたら if(sum + t >1000){ //1000を超えたと表示
-		 * System.out.println("合計が1,000を超えました。"); //最後の数値を足さなかったと表示
-		 * System.out.println("最後の数値は無視します。"); //for文を終了させる break; } //合計を求める
-		 * sum += t; //平均を出す ave = sum /i; }
-		 */
+
 		// 合計を表示
 		System.out.print("合計は" + sum + "です。");
 		// 平均を表示
-		System.out.print("平均は" + ave + "です。");
+		System.out.print("平均は" + average + "です。");
 	}
 }
