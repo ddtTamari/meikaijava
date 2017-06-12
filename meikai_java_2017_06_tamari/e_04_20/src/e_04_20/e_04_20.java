@@ -17,9 +17,9 @@ public class e_04_20 {
 		int n = stdIn.nextInt();
 
 		// iがｎ以下の時繰り返し、1ずつ増やしていく
-		for (int i = 1; i <= n; i++) {
+		for (int i = 0; i < n; i++) {
 			// ｊはn以下の時に繰り返し、ｊの値を一つ増やす
-			for (int j = 1; j <= n; j++) {
+			for (int j = 0; j < n; j++) {
 				// *を表示する
 				System.out.print('*');
 			}
