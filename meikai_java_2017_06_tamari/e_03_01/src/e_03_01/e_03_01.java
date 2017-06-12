@@ -18,12 +18,12 @@ public class e_03_01 {
 		int n = stdIn.nextInt();
 
 		// ｎが0以上の時、ｎの値をそのまま返す
-		if (n >= 0)
+		if (n >= 0) {
 			System.out.println("その絶対値は" + n + "です。");
 		// ｎが負の数の時、ｎを正の数に直し表示する
-		else if (n < 0)
+		} else if (n < 0) {
 			System.out.println("その絶対値は" + n * (-1) + "です。");
-
+		}
 	}
 
 }
