@@ -28,10 +28,11 @@ public class e_04_06 {
 		 * while(i <=n){ System.out.print('*'); i++; }
 		 */
 		// 入力されたｎが1未満の時
-		if (n < 1) {
+		if (n > 1) {
 			// 改行文字を出力する
 			System.out.println();
 		}
+
 	}
 
 }
