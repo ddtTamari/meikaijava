@@ -9,6 +9,9 @@ package e_03_13;
 import java.util.Scanner;
 
 public class e_03_13 {
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
@@ -24,27 +27,35 @@ public class e_03_13 {
 
 		int min = a; // 最初にminにaを代入
 		// もしbがminより小さければminの値にbを代入
-		if (b < min)
+		if (b < min) {
 			min = b;
+		}
 		// もしcがminより小さければminの値にcを代入
-		if (c < min)
+		if (c < min) {
 			min = c;
+		}
 
 		int max = a; // 最初にmaxにaを代入
 		// もしbがmaxより小さければmaxの値にbを代入
-		if (b > max)
+		if (b > max) {
 			max = b;
+		}
 		// もしcがmaxより小さければmaxの値にcを代入
-		if (c > max)
+		if (c > max) {
 			max = c;
+		}
 
-		int mid = a; // 最初にmidにaを代入
-		// もしminがmidより大きければmidにminを代入
-		if (min > mid)
-			mid = min;
-		// もしmaxがmidより小さければmidにmaxを代入
-		if (max < mid)
-			mid = max;
+		int mid = a; // 中央値に最初にmidにaを代入
+		//もしMaxとMinがbでなかった場合
+		if(max != b && min != b){
+			//中央値はｂ
+			mid = b;
+		}
+		//もしMaxとMinがｃ出なかった場合
+		if(max != c && min != c){
+			//中央値はｃ
+			mid = c;
+		}
 
 		// midを表示
 		System.out.println("mid = " + mid);
