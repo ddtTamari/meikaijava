@@ -27,11 +27,11 @@ public class e_04_15 {
 		// 身長と標準体重を表示
 		System.out.println("身長　　　標準体重");
 		// 身長が最大身長になるまで繰り返す
-		for (int hig = x; hig <= y; hig += z) {
+		for (int height = x; height <= y; height += z) {
 			// 平均体重を求める
-			double ave = (hig - 100) * 0.9;
+			double average = (height - 100) * 0.9;
 			// 身長と標準体重の値を表示する
-			System.out.println(hig + "　　　 " + ave);
+			System.out.println(height + "　　　 " + average);
 
 		}
 	}
