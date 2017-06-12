@@ -28,8 +28,8 @@ public class e_04_01 {
 				System.out.println("その値は0です。");
 			// retryに1を代入
 			retry = 1;
-			// System.out.print("もう一度？ 1...yes/0...no");
-			// retry = stdIn.nextInt();
+			System.out.print("もう一度？ 1...yes/0...no");
+			retry = stdIn.nextInt();
 		} while (retry == 1);
 
 	}
