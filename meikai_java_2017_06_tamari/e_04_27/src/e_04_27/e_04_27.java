@@ -25,11 +25,20 @@ public class e_04_27 {
 		Outer:
 		// y回繰り返す
 		for (int i = 1; i <= y; i++) {
+
 			// 答えの入力を促す
 			System.out.println("いくつかな？");
 			// xの値をキーボードから入力
 			x = stdIn.nextInt();
 
+			// 答えと回答があっていた場合
+			if (x == no) {
+				// 答えと数字が一緒の場合、正解ですと表示
+				System.out.println("正解です。");
+				// for文を終了
+				break Outer;
+
+			}
 			// y回目の時
 			if (i == y) {
 				// ゲームオーバーと表示
@@ -39,21 +48,12 @@ public class e_04_27 {
 				// Outerのfor文を終了
 				break Outer;
 			}
-
 			// もし入力した数字が答えより小さかったら、小さい数字ですと表示
-			if (x > no)
+			if (x > no) {
 				System.out.println("もっと小さな数字です。");
-			// もし入力した数字が答えより大きかったら、大きい数字ですと表示
-			else if (x < no)
+				// もし入力した数字が答えより大きかったら、大きい数字ですと表示
+			} else if (x < no) {
 				System.out.println("もっと大きな数字です。");
-			// 入力した数字が答えと同じになるまで繰り返す
-
-			// 答えと回答があっていた場合
-			if (x == no) {
-				// 答えと数字が一緒の場合、正解ですと表示
-				System.out.println("正解です。");
-				// for文を終了
-				break Outer;
 			}
 
 		}
