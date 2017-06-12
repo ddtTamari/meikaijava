@@ -31,7 +31,7 @@ public class e_04_15 {
 			// 平均体重を求める
 			double average = (height - 100) * 0.9;
 			// 身長と標準体重の値を表示する
-			System.out.println(height + "　　　  " + average);
+			System.out.println(height + "　　　 " + average);
 
 		}
 	}
