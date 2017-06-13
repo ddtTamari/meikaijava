@@ -9,7 +9,7 @@ package e_05_06;
 
 import java.util.Scanner;
 
-public interface e_05_06 {
+public class e_05_06 {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
@@ -24,7 +24,7 @@ public interface e_05_06 {
 			float i = y / 1000;
 			// xとiの誤差を表示する
 			System.out.printf("%1.7f  %1.7f\n", x, i);
-
+			stdIn.close();
 		}
 
 	}
