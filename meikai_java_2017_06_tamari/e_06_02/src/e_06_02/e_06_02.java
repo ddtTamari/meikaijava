@@ -8,12 +8,12 @@ package e_06_02;
 public class e_06_02 {
 
 	public static void main(String[] args) {
-		// int型の要素数が5つある配列を生成
+		// 5値を代入するための配列を準備
 		int[] a = new int[5];
 
 		// 要素数の数の分だけ繰り返す
 		for (int i = 0; i < a.length; i++) {
-			// 要素の中に要素数-iの値を代入
+			// 要素の中に1～5の値を代入
 			a[i] = a.length - i;
 			// 各要素の値を表示
 			System.out.println("a[" + i + "] = " + a[i]);
