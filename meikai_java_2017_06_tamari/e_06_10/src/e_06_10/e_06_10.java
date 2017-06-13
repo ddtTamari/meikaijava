@@ -21,7 +21,7 @@ public class e_06_10 {
 		// x個の要素を持つ配列aを作成
 		int[] a = new int[x];
 
-		// ｘ回繰り返す
+		// 配列の要素の数だけ繰り返し行う
 		for (int i = 0; i < x; i++) {
 			// 各要素に1～10のランダムな数字を代入する
 			a[i] = rand.nextInt(10) + 1;
@@ -36,6 +36,6 @@ public class e_06_10 {
 			// 各要素の値を表示
 			System.out.println("a[" + i + "] =" + a[i]);
 		}
-
+		stdIn.close();
 	}
 }
