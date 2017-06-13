@@ -20,6 +20,6 @@ public class e_05_01 {
 		System.out.printf("8進数では%o\n", x);
 		// 10進数のxを16進数にして表示
 		System.out.printf("16進数では%x\n", x);
-
+		stdIn.close();
 	}
 }
