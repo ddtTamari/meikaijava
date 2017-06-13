@@ -20,7 +20,7 @@ public class e_06_11 {
 
 		// x個の要素を持つ配列aを作成
 		int[] a = new int[x];
-		int random = 0;
+		int random = 0;//ランダムな値を入れるための型を作成
 
 		// ｘ回繰り返す
 		for (int i = 0; i < x; i++) {
@@ -39,7 +39,7 @@ public class e_06_11 {
 					for (int j = 0; j < i; j++) {
 						// j番目の要素がランダムと等しかったら
 						if (a[j] == random) {
-							// ラベルまで戻り繰り返す
+							// ラベルOuterまで戻り繰り返す
 							continue Outer;
 						}
 
@@ -54,5 +54,6 @@ public class e_06_11 {
 			// 配列の値を表示
 			System.out.println("a[" + i + "] = " + a[i]);
 		}
+		stdIn.close();
 	}
 }
