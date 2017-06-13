@@ -29,7 +29,7 @@ public class e_06_07 {
 			// 各要素に入っている値を表示
 			System.out.print(a[j] + " ");
 
-		// ｝を表示
+		// 問題文表示完了の目的で｝を表示
 		System.out.println("}");
 
 		// 探す数値の入力を促す
@@ -48,14 +48,16 @@ public class e_06_07 {
 		}
 
 		// 走査し終わる前ならば、探索成功
-		if (i > 0)
+		if (i > 0){
 			// i個めにkeyの値があると表示
 			System.out.println("それはa[" + i + "]にあります。");
+		}
 		// 失敗なら
-		else
+		else{
 			// keyの値は配列にないと表示
 			System.out.println("それはありません。");
-
+		}
+		stdIn.close();
 	}
 
 }
