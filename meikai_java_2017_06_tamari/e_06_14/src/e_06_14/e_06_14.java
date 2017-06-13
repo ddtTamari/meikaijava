@@ -33,17 +33,20 @@ public class e_06_14 {
 				// 問題を出す月がひとつ前の問題と同じ間繰り返す
 			} while (monthQue == question);
 
-
 			while (true) {
+				//1～12月の間で問題を表示する
 				System.out.print(monthQue + 1 + "月：");
 				// 答えをキーボードから取得
 				Answer = stdIn.next();
 				// 今出た問題をquestionとして保存
 				question = monthQue;
+				//答えと入力した値が違っていた時
 				if (Answer.equals(monthAnswer[monthQue]) == false) {
 					// 間違っていることを表示
 					System.out.println("違います。");
-				}else{
+				//答えと入力した値が同じの時
+				} else {
+					//while文から抜け出し次の行程へ移行
 					break;
 				}
 
