@@ -11,15 +11,15 @@ public class e_05_04 {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		// 整数値xの入力を促す
+		// 合計と平均を出すための3値のうちの一つ目
 		System.out.print("整数値x：");
 		// xの値をキーボードから取得
 		int x = stdIn.nextInt();
-		// 整数値yの入力を促す
+		// 合計と平均を出すための3値のうちの二つ目
 		System.out.print("整数値y：");
 		// yの値をキーボードから取得
 		int y = stdIn.nextInt();
-		// 整数値zの入力を促す
+		// 合計と平均を出すための3値のうちの三つ目
 		System.out.print("整数値z：");
 		// zの値をキーボードから取得
 		int z = stdIn.nextInt();
@@ -32,6 +32,7 @@ public class e_05_04 {
 		double ave = (x + y + z) / 3.0;
 		// 平均値を表示
 		System.out.println("xとyとzの平均は" + ave);
+		stdIn.close();
 
 	}
 }
