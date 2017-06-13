@@ -39,6 +39,7 @@ public class e_06_14 {
 			//今出た問題をquestionとして保存
 			question = monthQue;
 
+
 			//入力した答えと、要素に入っている英語表記が一緒ならば
 			if (Answer.equals(monthAnswer[monthQue])) {
 				//正解したことを表示
