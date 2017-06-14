@@ -12,17 +12,19 @@ public class e_02_06 {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		// 底辺の入力をもとめる
+		// 三角形の底辺の値の入力を促す
 		System.out.print("底辺：");
-		// double型の変数ｘをキーボードから得られるようにする
-		double x = stdIn.nextDouble();
-		// 高さの入力を求める
+		// 底辺の値をキーボードから取得
+		double triangleBase = stdIn.nextDouble();
+		// 三角形の高さの値の入力を促す
 		System.out.print("高さ：");
-		// double型の変数ｙをキーボードから得られるようにする
-		double y = stdIn.nextDouble();
+		// 高さの値をキーボードから取得
+		double triangleHeight = stdIn.nextDouble();
 
-		// 底辺×高さ÷2で三角形の面積を求める
-		System.out.println("面積は" + (x * y) / 2 + "です。");
+		// 底辺×高さ÷2の公式により三角形の面積を求め、表示する
+		System.out.println("面積は" + (triangleBase * triangleHeight) / 2 + "です。");
 
+		//ストリームを解放する
+		stdIn.close();
 	}
 }
