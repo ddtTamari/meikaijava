@@ -12,28 +12,39 @@ public class e_03_12 {
 
 	public static void main(String[] args) {
 
-		Scanner stdIn = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 
-		// 整数値aをキーボードから入力
+		//最小値を比べる3値のうちの一つ目の入力を促す
 		System.out.print("整数値a:");
-		int a = stdIn.nextInt();
-		// 整数値bをキーボードから入力
+		//最小値を比べる3値のうちの一つ目の値をキーボードから取得
+		int integerA = scan.nextInt();
+		// 最小値を比べる3値のうちの二つ目の入力を促す
 		System.out.print("整数値b：");
-		int b = stdIn.nextInt();
-		// 整数値cをキーボードから入力
+		//最小値を比べる3値のうちの二つ目の値をキーボードから取得
+		int integerB = scan.nextInt();
+		// 最小値を比べる3値のうちの三つ目の入力を促す
 		System.out.print("整数値c：");
-		int c = stdIn.nextInt();
+		//最小値を比べる3値のうちの三つ目の値をキーボードから取得
+		int integerC = scan.nextInt();
 
-		int min = a; // 最初にminにaを代入
-		// もしbがminより小さければminの値にbを代入
-		if (b < min)
-			min = b;
-		// もしcがminより小さければminの値にcを代入
-		if (c < min)
-			min = c;
 
-		// minの値を表示
+		int min = integerA; // 最小値の初期値として一つ目の変数を代入
+		// 最小値より二つ目の変数のほうが小さければ、最小値に二つ目の変数を代入
+		if (integerB < min){
+			//二つ目の変数のほうが小さいので、最小値を二つ目の変数に変更
+			min = integerB;
+		}
+		// 現在の最小値より三つ目の変数のほうが小さければ、最小値に三つ目の変数を代入
+		if (integerC < min){
+			//三つ目の変数のほうが小さいので、最小値を三つ目の変数に変更
+			min = integerC;
+		}
+
+		// 現在の最小値の値を表示する
 		System.out.println("min=" + min);
+		//ストリームを解放
+		scan.close();
+
 	}
 
 }
