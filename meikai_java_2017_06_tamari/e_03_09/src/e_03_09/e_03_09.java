@@ -10,20 +10,24 @@ import java.util.Scanner;
 
 public class e_03_09 {
 	public static void main(String[] args) {
-		Scanner stdIn = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 
-		// 整数aの入力を促す
+		// 2値のうち大きいほうの値を判定するプログラムの、一つ目の実数aの入力を促す
 		System.out.print("実数a:");
-		// 整数aをキーボードから入力
-		double a = stdIn.nextDouble();
-		// 整数aの入力を促す
+		// 一つ目の実数の値をキーボードから取得する
+		double decimalA = scan.nextDouble();
+		// 2値のうち大きいほうの値を判定するプログラムの、二つ目の実数bの入力を促す
 		System.out.print("実数b:");
-		// 整数aをキーボードから入力
-		double b = stdIn.nextDouble();
+		// 二つ目の実数の値をキーボードから取得する
+		double decimalB = scan.nextDouble();
 
-		// 整数aと整数bを比べてaが大きいならaをbが大きいならｂがmaxとして表示する
-		double max = a > b ? a : b;
+
+		//一つ目と二つ目の値を比べ一つ目が大きければ一つ目の値を、二つ目が大きければ二つ目の値を最大値という変数に代入する
+		double max = decimalA > decimalB ? decimalA : decimalB;
+		//大きいほうの値を表示する
 		System.out.println(max);
+		//ストリームを解放
+		scan.close();
 	}
 
 }
