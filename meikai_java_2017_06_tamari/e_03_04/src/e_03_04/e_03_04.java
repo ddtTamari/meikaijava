@@ -10,26 +10,32 @@ import java.util.Scanner;
 
 public class e_03_04 {
 	public static void main(String[] args) {
-		Scanner stdIn = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 
-		// 変数aの入力を促す
+		// 大きさを比べる2値のうちの一つ目の入力を促す
 		System.out.print("変数a：");
-		// キーボードから変数aに代入
-		int a = stdIn.nextInt();
-		// 変数bの入力を促す
+		// 一つ目の値をキーボードから取得する
+		int integerA = scan.nextInt();
+		// 大きさを比べる2値のうちの二つ目の入力を促す
 		System.out.print("変数b：");
-		// キーボードから変数bに代入
-		int b = stdIn.nextInt();
+		// 二つ目の値をキーボードから取得する
+		int integerB = scan.nextInt();
 
-		// aがbより大きいとき、aのほうが大きいと表示
-		if (a > b)
+		// 一つ目の値が二つ目の値より大きい値の時、一つ目の値のほうが大きいと表示する
+		if (integerA > integerB){
+			//一つ目の値のほうが大きいので、一つ目の値のほうが大きいと表示
 			System.out.println("aのほうが大きいです。");
-		// aがbより小さいとき、bのほうが大きいと表示
-		else if (a < b)
+		// 一つ目の値が二つ目の値より小さい値の時、二つ目の値のほうが大きいと表示する
+		}else if (integerA < integerB){
+			//二つ目の値のほうが大きいため、二つ目の値のほうが大きいと表示
 			System.out.println("bのほうが大きいです。");
-		// aとbが同じ値の時、aとｂは同じ値と表示
-		else
+		// 一つ目の値と二つ目の値に差がないとき、同じ値であると表示する
+		}else{
+			//2値は同じ値なので、2値は同じ値であると表示
 			System.out.println("aとbは同じ値です。");
+		}
+		//ストリームの解放
+		scan.close();
 	}
 
 }
