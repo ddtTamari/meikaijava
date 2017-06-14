@@ -1,5 +1,5 @@
 /*
- 	演習2-10	キーボードから読み込んだ数値に10を足したのと減じた数字を出力する
+ 	演習2-10	名前の姓と名を個別にキーボードから読み込み挨拶を行うプログラム
 	制作日時	6月5日
 	制作者	玉利仁美
 
@@ -10,19 +10,21 @@ import java.util.Scanner;
 
 public class e_02_10 {
 	public static void main(String[] args) {
-		Scanner stdIn = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 
 		// 姓の入力を促す
-		System.out.print("姓：");
-		// string型の変数にキーボードから入力された文字列を代入
-		String s = stdIn.next();
+		System.out.println("姓：");
+		// 姓の文字列をキーボードから取得する
+		String familyName = scan.next();
 		// 名の入力を促す
-		System.out.print("名：");
-		// string型の変数にキーボードから入力された文字列を代入
-		String n = stdIn.next();
+		System.out.println("名：");
+		// 名の文字列をキーボードから取得する
+		String lastName = scan.next();
+		//ストリームの解放
+		scan.close();
+		// 取得した姓と名を表示する
+		System.out.println("こんにちは" + familyName + lastName + "さん。");
 
-		// 代入されたs,nを表示する
-		System.out.println("こんにちは" + s + n + "さん。");
 
 	}
 
