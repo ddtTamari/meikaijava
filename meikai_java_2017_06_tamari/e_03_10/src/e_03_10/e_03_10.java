@@ -11,22 +11,23 @@ import java.util.Scanner;
 public class e_03_10 {
 
 	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
 
-		Scanner stdIn = new Scanner(System.in);
-
-		// 実数aの入力を促す
+		// 値の差を求める2値のうちの一つ目の入力を促す
 		System.out.print("実数a:");
-		// aをキーボードから入力
-		int a = stdIn.nextInt();
-		// 実数bの入力を促す
+		// 値の差を求める、2値のうちの一つ目の値をキーボードから取得
+		int integerA = scan.nextInt();
+		// 値の差を求める2値のうちの二つ目の入力を促す
 		System.out.print("実数b：");
-		// bをキーボードから入力
-		int b = stdIn.nextInt();
+		// 値の差を求める、2値のうちの二つ目の値をキーボードから取得
+		int integerB = scan.nextInt();
 
-		// 2つの整数値の差を求める
-		int x = a - b;
-		// 2つの整数値の差を表示する
-		System.out.println(x);
+		// 二つの値の差を求めるため、2値を引き算し、差という変数に代入
+		int difference = integerA - integerB;
+		// 2値の差を表示する
+		System.out.println(difference);
+		// ストリームを解放する
+		scan.close();
 
 	}
 
