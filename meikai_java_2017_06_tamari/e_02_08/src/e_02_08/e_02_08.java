@@ -14,15 +14,17 @@ public class e_02_08 {
 		Random rand = new Random();
 		Scanner stdIn = new Scanner(System.in);
 
-		// 整数値の入力を促す
+		// プラスマイナス5の範囲の基準となる整数値の入力を促す
 		System.out.print("整数値：");
-		// 変数ｘをキーボードから入力
-		int x = stdIn.nextInt();
-		// 変数ｙは0～10までの数字から変数ｘから5を減らした数字、これによって変数ｘからプラスマイナス5の数字がでる
-		int y = rand.nextInt(11) + (x - 5);
-		// ｙを表示する
-		System.out.println(y);
+		// プラスマイナス5の範囲の基準となる整数値をキーボードから取得
+		int integer = stdIn.nextInt();
+		//  あらかじめ基準の値から5を引いた数に0～10を足すことで、基準値からプラスマイナス5の値をランダムで生成する
+		int  randomNumber = rand.nextInt(11) + (integer - 5);
+		// 生成されたプラスマイナス5の範囲の値を表示
+		System.out.println(randomNumber);
 
+		//ストリームを解放する
+		stdIn.close();
 	}
 
 }
