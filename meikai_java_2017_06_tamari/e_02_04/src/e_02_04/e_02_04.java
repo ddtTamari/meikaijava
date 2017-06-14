@@ -12,15 +12,16 @@ public class e_02_04 {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		// 整数値の入力を促す
+		// 10を加えた値と減らした値のもととなる整数値の値の入力を促す
 		System.out.print("整数値：");
-		// 変数ｘにキーボードから読み込んだ数字を入れる
-		int x = stdIn.nextInt();
+		// これからプラスマイナス10する値をキーボードから取得
+		int integer = stdIn.nextInt();
 
-		// 入力した数字に10を足す
-		System.out.println("10を加えた値は" + (x + 10) + "です。");
-		// 入力した数字から10を引く
-		System.out.println("10を減じた値は" + (x - 10) + "です。");
-
+		// 入力された値に10を足し表示
+		System.out.println("10を加えた値は" + (integer + 10) + "です。");
+		// 入力した数字から10を引き表示
+		System.out.println("10を減じた値は" + (integer - 10) + "です。");
+		//ストリームを解放する
+		stdIn.close();
 	}
 }
