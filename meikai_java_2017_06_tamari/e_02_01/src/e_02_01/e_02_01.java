@@ -9,19 +9,19 @@ package e_02_01;
 public class e_02_01 {
 	public static void main(String[] args) {
 
-		double decimalA; // decimalAはint型の変数
-		double decimalB; // decimalBはint型の変数
+		double decimalA; // decimalAはdouble型の2値のうちの一つ目
+		double decimalB; // decimalBはdouble型の2値のうちの二つ目
 
 		decimalA = 63.1; // ｘに小数部を持つ実数値を代入
 		decimalB = 18.2; // decimalに少数部を持つ実数値を代入
 
-		// decimalの値を表示
+		// decimalAの値を表示
 		System.out.println("decimalAの値は" + decimalA + "です。");
-		// ｙの値を表示
+		// decimalBの値を表示
 		System.out.println("decimalBの値は" + decimalB + "です。");
-		// ｘ+ｙの結果を表示
+		// decimalAとdecimalBの合計の値を表示
 		System.out.println("合計は" + (decimalA + decimalB) + "です。");
-		// ｘとｙの平均を表示
+		// decimalAとdecimalBの平均の値を表示
 		System.out.println("平均は" + (decimalA + decimalB) / 2 + "です。");
 
 	}
