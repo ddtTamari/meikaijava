@@ -9,22 +9,27 @@ import java.util.Scanner;
 
 public class e_03_03 {
 	public static void main(String[] args) {
-		Scanner stdIn = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 
-		// 整数値の入力を促す
+		// 符号を判定する整数値の入力を促す
 		System.out.print("整数値：");
-		// キーボードから変数ｎを入力
-		int n = stdIn.nextInt();
+		// 符号を判定する整数値をキーボードから取得する
+		int integer = scan.nextInt();
 
-		// ｎが正の数字の時、その値は正であると表示
-		if (n > 0)
+		// 入力された整数値が、0より大きいならば符号は正となる
+		if (integer > 0) {
+			//0より大きいので、正の値であると表示
 			System.out.println("その値は正です。");
-		// ｎが負の数字の時、その値は負であると表示
-		else if (n < 0)
+		// 入力っされた整数値が、0より小さいならば符号は負となる
+		} else if (integer < 0) {
+			//0より小さいので、負の値であると表示
 			System.out.println("その値は負です。");
-		// ｎが0の時、その値は0であると表示
-		else if (n == 0)
+			// 入力された値が、0ならば符号は0になる
+		} else if (integer == 0) {
+			//値が0なので、0であると表示
 			System.out.println("その値は0です。");
+		}
+		scan.close();
 	}
 }
 
