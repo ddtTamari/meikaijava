@@ -9,55 +9,63 @@ package e_03_13;
 import java.util.Scanner;
 
 public class e_03_13 {
-	/**
-	 * @param args
-	 */
+
 	public static void main(String[] args) {
-		Scanner stdIn = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 
-		// 整数値aをキーボードから入力
+		// 3値の中央値を求めるプログラムの一つ目の変数値の入力を促す
 		System.out.print("整数値a:");
-		int a = stdIn.nextInt();
-		// 整数値bをキーボードから入力
+		// 3値の一つ目の変数の値をキーボードから取得
+		int integerA = scan.nextInt();
+		// 3値の中央値を求めるプログラムの二つ目の変数値の入力を促す
 		System.out.print("整数値b：");
-		int b = stdIn.nextInt();
-		// 整数値cをキーボードから入力
+		// 3値の二つ目の変数の値をキーボードから取得
+		int integerB = scan.nextInt();
+		// 3値の中央値を求めるプログラムの三つ目の変数値の入力を促す
 		System.out.print("整数値c：");
-		int c = stdIn.nextInt();
+		// 3値の三つ目の変数の値をキーボードから取得
+		int integerC = scan.nextInt();
 
-		int min = a; // 最初にminにaを代入
-		// もしbがminより小さければminの値にbを代入
-		if (b < min) {
-			min = b;
+		int min = integerA; // 最小値の初期値を整数Aに設定
+		// 最小値が整数Bより大きかった場合、最小値に整数Bを代入
+		if (integerB < min) {
+			// 整数Bのほうが最小値より小さいので、最小値に整数Bを代入
+			min = integerB;
 		}
-		// もしcがminより小さければminの値にcを代入
-		if (c < min) {
-			min = c;
-		}
-
-		int max = a; // 最初にmaxにaを代入
-		// もしbがmaxより小さければmaxの値にbを代入
-		if (b > max) {
-			max = b;
-		}
-		// もしcがmaxより小さければmaxの値にcを代入
-		if (c > max) {
-			max = c;
+		// 最小値が整数Cより大きかった場合、最小値に整数Cを代入
+		if (integerC < min) {
+			// 整数Cのほうが最小値より小さいので、最小値に整数Cを代入
+			min = integerC;
 		}
 
-		int mid = a; // 中央値に最初にmidにaを代入
-		//もしMaxとMinがbでなかった場合
-		if(max != b && min != b){
-			//中央値はｂ
-			mid = b;
+		int max = integerA; // 最大値の初期値を整数Aに設定
+		// 最大値が整数Bより小さければ、最大値に整数Bを代入
+		if (integerB > max) {
+			// 整数Bが最大値より大きいので、最大値に整数Bを代入
+			max = integerB;
 		}
-		//もしMaxとMinがｃ出なかった場合
-		if(max != c && min != c){
-			//中央値はｃ
-			mid = c;
+		// 最大値が整数Cより小さければ、最大値に整数Cを代入
+		if (integerC > max) {
+			// 整数Cが最大値より大きいので、最大値に整数Cを代入
+			max = integerC;
 		}
 
-		// midを表示
-		System.out.println("mid = " + mid);
+		int midian = integerA; // 中央値の初期値を整数Aに設定
+		// 最大値と最小値ではない値が中央値なので、
+		// 整数Bが最大でも最小でもないとき中央値は整数Bになる
+		if (max != integerB && min != integerB) {
+			// 整数Bが最大でも最小でもなかったので、中央値に整数Bを代入
+			midian = integerB;
+		}
+		// 整数Cが最大でも最小でもないとき中央値は整数Cになる
+		if (max != integerC && min != integerC) {
+			// 整数Cが最大でも最小でもなかったので、中央値に整数Cを代入
+			midian = integerC;
+		}
+
+		//最終的にでた中央値の値を表示する
+		System.out.println("mid = " + midian);
+		// ストリームの解放
+		scan.close();
 	}
 }
