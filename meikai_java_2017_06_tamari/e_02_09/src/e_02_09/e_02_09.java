@@ -12,18 +12,18 @@ public class e_02_09 {
 	public static void main(String[] args) {
 		Random rand = new Random();
 
-		// double型の変数ｘにランダムで代入
-		double x = rand.nextDouble();
-		// int型の変数ｙに0～9までの数字をランダムで代入
-		int y = rand.nextInt(10);
-		// int型の変数zに0,1の数字を代入
-		int z = rand.nextInt(2);
+		// nextDouble()を使うことで0.0以上1.0未満の数値をランダムで代入
+		double decimal = rand.nextDouble();
+		// 0.0以上10.0未満の実数値を出すために0～9までの数字をランダムで代入
+		int integerA = rand.nextInt(10);
+		// －1.0以上1.0未満の実数値を出すために0,1の数字をランダムで代入
+		int integerB = rand.nextInt(2);
 
-		// 0.0以上1.0未満の実数値を表示
-		System.out.println(x);
-		// 0.0以上10.0未満の数字を表示
-		System.out.println(x + y);
-		// -1.0以上1.0未満の数字を表示
-		System.out.println(x - z);
+		// 0.0以上1.0未満の実数値ランダムで表示
+		System.out.println(decimal);
+		// 0～9までの値に0.0以上1.0未満の値を足すことで、0.0以上10.0未満のランダムな数値を生成、表示
+		System.out.println(integerA + decimal);
+		// 0.0以上1.0未満の値に0～1の整数値を引くことで、-1.0以上1.0未満のランダムな数値を生成、表示
+		System.out.println(decimal - integerB);
 	}
 }
