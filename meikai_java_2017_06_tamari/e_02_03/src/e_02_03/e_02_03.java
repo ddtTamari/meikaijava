@@ -12,14 +12,16 @@ public class e_02_03 {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		// 整数値の入力を促す
+		// 表示する整数値の入力を促す
 		System.out.print("整数値：");
 
-		// 変数ｘにキーボードから読み込んだ数字を入れる
-		int x = stdIn.nextInt();
+		// 表示する整数値の値をキーボードから取得する
+		int integer = stdIn.nextInt();
 
-		// 入力した数字をそのまま返す
-		System.out.println(x + "と入力しましたね。");
+		// 入力された値をそのまま表示する
+		System.out.println(integer + "と入力しましたね。");
 
+		//ストリームを解放する
+		stdIn.close();
 	}
 }
