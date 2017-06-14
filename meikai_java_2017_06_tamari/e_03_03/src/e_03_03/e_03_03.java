@@ -29,6 +29,7 @@ public class e_03_03 {
 			//値が0なので、0であると表示
 			System.out.println("その値は0です。");
 		}
+		//ストリームの解放
 		scan.close();
 	}
 }
