@@ -10,20 +10,24 @@ import java.util.Scanner;
 
 public class e_03_01 {
 	public static void main(String[] args) {
-		Scanner stdIn = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 
-		// 整数値の入力を促す
+		// 絶対値を求める整数の値の入力を促す
 		System.out.print("整数値：");
-		// 変数ｎにキーボードから入力
-		int n = stdIn.nextInt();
+		// 絶対値を求める整数値をキーボードから取得する
+		int integer = scan.nextInt();
 
-		// ｎが0以上の時、ｎの値をそのまま返す
-		if (n >= 0) {
-			System.out.println("その絶対値は" + n + "です。");
-		// ｎが負の数の時、ｎを正の数に直し表示する
-		} else if (n < 0) {
-			System.out.println("その絶対値は" + n * (-1) + "です。");
+		// 入力された整数値が0または正の値だった場合、入力された整数値は絶対値と同じ値になる
+		if (integer >= 0) {
+			// 入力された整数値をそのまま値を表示
+			System.out.println("その絶対値は" + integer + "です。");
+			// 入力された整数値が負の値であれば、絶対値は正の値なので、－1をかけて正の値に直す
+		} else if (integer < 0) {
+			//入力された整数値を正の値に直し表示する
+			System.out.println("その絶対値は" + integer * (-1) + "です。");
 		}
+		//ストリームの解放をする
+		scan.close();
 	}
 
 }
