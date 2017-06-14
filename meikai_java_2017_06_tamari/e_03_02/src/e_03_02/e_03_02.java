@@ -10,22 +10,27 @@ import java.util.Scanner;
 
 public class e_03_02 {
 	public static void main(String[] args) {
-		Scanner stdIn = new Scanner(System.in);
+		Scanner scan = new Scanner(System.in);
 
-		// 整数Aの入力を求める
+		// 2値のうち一つ目の整数の入力を促す、二つ目の値が一つ目の値の約数であるか調べるための変数
 		System.out.print("整数A:");
-		// 変数aにキーボードから入力
-		int a = stdIn.nextInt();
-		// 整数Bの入力を求める
+		// 二つ目の値が一つ目の値の約数であるか調べるための、一つ目の値をキーボードから入力する
+		int integer = scan.nextInt();
+		// 2値のうちの二つ目で、一つ目の値の約数であるか判断するための変数の入力を促す
 		System.out.print("整数B：");
-		// 変数ｂにキーボードから入力
-		int b = stdIn.nextInt();
+		// 二つ目の値の入力をキーボードから取得する
+		int divisor = scan.nextInt();
 
-		// aをbで割った余りが0ならば約数と表示
-		if (a % b == 0)
+		// 一つ目の値を二つ目の値で割り切れるならば、二つ目の値は一つ目の値の約数であるといえる
+		if (integer % divisor == 0) {
+			//一つ目の値を二つ目の値で割り切れたので、約数であると表示
 			System.out.println("BはAの約数です。");
-		// aをbで割った余りが0以外なら約数ではないと表示
-		else
+			// 一つ目の値を二つ目の値で割り切れないならば、変数ではない
+		} else {
+			//一つ目の値を二つ目の値で割り切れないので、変数ではないと表示
 			System.out.println("BはAの約数ではありません");
+		}
+		//ストリームの解放
+		scan.close();
 	}
 }
