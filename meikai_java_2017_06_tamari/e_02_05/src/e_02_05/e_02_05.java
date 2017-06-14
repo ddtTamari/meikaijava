@@ -12,18 +12,20 @@ public class e_02_05 {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		// ｘの値の入力を求める
+		// 合計と平均を求める2値のうち一つ目の値の入力を促す
 		System.out.print("xの値：");
-		// double型の変数ｘをキーボードから得られるようにする
-		double x = stdIn.nextDouble();
-		// ｙの値の入力を求める
+		// 2値のうちの一つ目の値をキーボードから取得
+		double decimalX = stdIn.nextDouble();
+		// 合計と平均を求める2値のうち二つ目の値の入力を促す
 		System.out.print("yの値：");
-		// double型の変数ｙをキーボードから得られるようにする
-		double y = stdIn.nextDouble();
+		// 2値のうちの二つ目の値をキーボードから取得
+		double decimalY = stdIn.nextDouble();
 
-		// キーボードから得た変数ｘとｙの値を足し算
-		System.out.println("合計は" + (x + y) + "です。");
-		// キーボードから得た変数ｘとｙの値の平均を求める
-		System.out.println("平均は" + (x + y) / 2 + "です。");
+		// キーボードから得た2値の合計を求め表示
+		System.out.println("合計は" + (decimalX + decimalY) + "です。");
+		// キーボードから得た2値の平均を計算し表示
+		System.out.println("平均は" + (decimalX + decimalY) / 2 + "です。");
+		//ストリームを解放する
+		stdIn.close();
 	}
 }
