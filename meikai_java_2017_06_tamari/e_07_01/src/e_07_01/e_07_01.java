@@ -39,7 +39,7 @@ public class e_07_01 {
 			argment = -1;
 		}
 
-		//仮引数を返却地として返す
+		//仮引数を返却値として返す
 		return argment;
 	}
 }
