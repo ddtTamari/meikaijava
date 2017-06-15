@@ -11,82 +11,82 @@ public class e_06_16 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		// 要素の数の入力を求める
 
-		// 2つの求める行列の積の配列のうち4行3列の配列arrayAを作成
+		// 2つの計算する行列の積の配列のうち4行3列の配列arrayAを作成
 		int[][] arrayA = new int[4][3];
-		// 2つの求める行列の席の配列のうち3行4列の配列arrayBを作成
+		// 2つの計算する行列の積の配列のうち3行4列の配列arrayBを作成
 		int[][] arrayB = new int[3][4];
-		// 積を代入する配列cを作成
+		// 行列の積の値を代入する配列cを作成
 		int[][] arrayC = new int[4][4];
 
-		// 配列aの値を入力
-		// 4行分繰り返す
+		// 4行3列のarrayAの4行分を表示するために4回繰り返す
 		for (int i = 0; i < 4; i++) {
-			// 3列分繰り返す
+			// 4行3列のarrayAの3列分の表示するために3回繰り返す
 			for (int j = 0; j < 3; j++) {
-				// 配列aのインデックスを表示する
+				// arrayA配列の何行何列目なのかを表示し、その要素の値の入力を促す
 				System.out.print("a[" + i + "][" + j + "] = ");
-				// 各要素の値を入力
+				// arrayA配列のi行j列目の値をキーボードから取得
 				arrayA[i][j] = scan.nextInt();
 			}
 		}
 
-		// 配列bの値を入力
-		// 3行4列分の3行分繰り返す
+		// 3行4列分の配列arrayBの3行分を表示するため3回繰り返す
 		for (int i = 0; i < 3; i++) {
-			// 3行4列分の4列分繰り返す
+			// 3行4列の配列arrayBの4列分を表示するため4回繰り返す
 			for (int j = 0; j < 4; j++) {
-				// 配列bのインデックスを表示する
+				// 配列arrayBの何行何列目なのかを表示し、その要素の値の入力を促す
 				System.out.print("b[" + i + "][" + j + "] = ");
-				// 各要素の値を入力
+				// arrayB配列のi行j列目の値をキーボードから取得
 				arrayB[i][j] = scan.nextInt();
 			}
 		}
-//		 arrayA[0].length
-//		 arrayB[0].length
+
+		// 配列arrayCの4行4列の4行分を表示できるよう一行ずつ4回繰り返し行う
 		for (int i = 0; i < 4; i++) {
+			// 配列arrayCの4行4列の4列分を表示できるよう、一列分ずつ表示を4回繰り返す
 			for (int j = 0; j < 4; j++) {
-				for (int k = 0; k <3; k++) {
+				// 配列arrayAの3列分と配列arrayBの4行分の表示ができるよう、3回繰り返す。
+				for (int k = 0; k < 3; k++) {
+					// 配列arrayCの各要素には、arrayAのi行目のk列とarrayBのj列目k行をかけた数を足した値が入る
 					arrayC[i][j] += arrayA[i][k] * arrayB[k][j];
 				}
 			}
 		}
 
-		// aの配列であることを表示
+		// 配列arrayAであることを表示し、以下に書かれる要素がarrayAのものであると表現する
 		System.out.println("配列a");
-		// 4行分の繰り返しを行う
+		// 配列arrayAの4行分のi行目を表示するために、４回繰り返し行う
 		for (int i = 0; i < 4; i++) {
-			// 3列分の繰り返しを行う
+			// 配列arrayBの3列分のj列目を表示するために3回繰り返しを行う
 			for (int j = 0; j < 3; j++) {
-				// 最低でも4桁で配列aの値を表示
+				// 値の位置を揃えるために最低でも4桁で表示するようにし、arrayAのi行j列の値を表示
 				System.out.printf("%4d", arrayA[i][j]);
 			}
-			// 改行
+			// i行目が表示し終わったら、次の行に表示するよう改行する
 			System.out.println();
 		}
-		// bの配列であることを表示
+		// 配列arrayBであることを表示し、以下に書かれる要素がarrayBのものであると表現する
 		System.out.println("配列b");
-		// 3行分の繰り返しを行う
+		// 配列arrayBの3行分のi行目を表示するために、3回繰り返し行う
 		for (int i = 0; i < 3; i++) {
-			// 4列分の繰り返しを行う
+			// 配列arrayBの4列分のj列目を表示するために4回繰り返しを行う
 			for (int j = 0; j < 4; j++) {
-				// 最低でも4桁で配列bの値を表示
+				// 値の位置を揃えるために最低でも4桁で表示するようにし、arrayBのi行j列の値を表示
 				System.out.printf("%4d", arrayB[i][j]);
 			}
-			// 改行
+			// i行目が表示し終わったら、次の行に表示するよう改行する
 			System.out.println();
 		}
-		// bの配列であることを表示
+		// arrayAとarrayBの行列の積を以降に書いていくことを表示
 		System.out.println("行列の積");
-		// 3行分の繰り返しを行う
+		//arrayAとarrayBの行列の積の行列は4行4列のためi行目を4回繰り返し行う
 		for (int i = 0; i < 4; i++) {
-			// 4列分の繰り返しを行う
+			// 4行4列のj列目を4回繰り返し行う
 			for (int j = 0; j < 4; j++) {
-				// 最低でも4桁で配列bの値を表示
+				// 値の位置を揃えるため、最低でも4桁で表示するようにし、arrayCのi行j列目の値を表示
 				System.out.printf("%4d", arrayC[i][j]);
 			}
-			// 改行
+			// i行目のj列をすべて終わったら、i+1行目を次の行に表示するよう改行する
 			System.out.println();
 		}
 
