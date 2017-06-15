@@ -24,7 +24,7 @@ public class e_07_02 {
 		//三つ目の引数の値をキーボードから取得
 		int argmentC = scan.nextInt();
 
-		//最小値を求めるminメソッドを呼び出し、返却地を表示
+		//最小値を求めるminメソッドを呼び出し、返却値を表示
 		System.out.println("最小値は：" + min(argmentA, argmentB, argmentC));
 		//ストリームを解放
 		scan.close();
@@ -44,7 +44,7 @@ public class e_07_02 {
 			//最小値がcより大きかったので、最小値にcを代入
 			min = c;
 		}
-		//ストリームを解放
+		//返却値としてminを返す
 		return min;
 
 	}
