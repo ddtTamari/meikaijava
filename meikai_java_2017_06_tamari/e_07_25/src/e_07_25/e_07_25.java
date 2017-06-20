@@ -1,6 +1,6 @@
 /*
   演習7-25		配列aから要素a[idx]を削除した配列を返却するメソッド
-  演習日		6月17日
+  演習日		6月20日
   製作者		玉利仁美
  */
 package e_07_25;
@@ -65,7 +65,7 @@ public class e_07_25 {
 					// i番目の要素に仮引数配列aのｎ個先の要素の値を代入することでn個前方にずらす
 					arrayNRemove[i] = a[i + n];
 				}
-			// 消す要素より前の要素はそのままarrayRemoveに入る
+				// 消す要素より前の要素はそのままarrayRemoveに入る
 			} else {
 				// 配列arrayRemoveに配列aのi番目の要素を代入する
 				arrayNRemove[i] = a[i];
