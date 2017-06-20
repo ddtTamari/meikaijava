@@ -1,5 +1,5 @@
 /*
-  演習7-25		配列aの要素a[idx]にxを挿入した配列を返却するメソッドarrayInsOfを作成
+  演習7-26		配列aの要素a[idx]にxを挿入した配列を返却するメソッドarrayInsOfを作成
   演習日		6月20日
   製作者		玉利仁美
  */
@@ -32,7 +32,7 @@ public class e_07_26 {
 		int index = scan.nextInt();
 		// 何の値を挿入するのか入力を求める
 		System.out.print("何の値をいれますか：");
-		//何の値を挿入するのかキーボードからインデックス番号を取得
+		// 何の値を挿入するのかキーボードからインデックス番号を取得
 		int increaseValue = scan.nextInt();
 		// arrayInsOfメソッドで作られた配列の長さを格納しておく
 		int arrayInsOfLong = arrayInsOf(array1, index, increaseValue).length;
@@ -61,7 +61,7 @@ public class e_07_26 {
 				// idx番目の要素に挿入したい引数ｘの値を代入する
 				arrayIncrease[i] = x;
 				// 挿入した後は返却する配列の要素番号が一つずつずれて引数の配列の要素の値を入れる、
-				//ずれたすぐ後の配列番号はiがidxの時にしなければ初期値のままになってしまう
+				// ずれたすぐ後の配列番号はiがidxの時にしなければ初期値のままになってしまう
 				arrayIncrease[i + 1] = a[i];
 				// 消す要素より前の要素はそのままarrayRemoveに入る
 			} else if (i < idx) {
