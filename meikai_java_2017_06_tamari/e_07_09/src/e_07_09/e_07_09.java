@@ -12,8 +12,8 @@ public class e_07_09 {
 	static Scanner scan = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		// 正の整数を返却できるまで再入力させるメソッドを呼び出す
-		readPlusInt();
+		// 正の整数を返却できるまで再入力させるメソッドを呼び出し返却された値を表示する
+		System.out.print("返却された整数：" + readPlusInt());
 	}
 
 	static int readPlusInt() {
