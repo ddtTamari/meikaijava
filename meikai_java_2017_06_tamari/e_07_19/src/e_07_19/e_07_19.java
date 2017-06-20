@@ -33,10 +33,10 @@ public class e_07_19 {
 		// 何個分の要素を消すのか値の入力を求める
 		System.out.print("何個分の値を消しますか：");
 		// いくつの要素分値を消すのかキーボードから取得
-		int howMany = scan.nextInt();
+		int howManyRemove = scan.nextInt();
 
 		// 指定した要素の値を消すメソッド
-		aryRmvN(arrayA, index, howMany);
+		aryRmvN(arrayA, index, howManyRemove);
 
 		// 配列の要素数分表示するために繰り返し行う
 		for (int i = 0; i < elements; i++) {
@@ -45,7 +45,6 @@ public class e_07_19 {
 		}
 		// ストリームを解放する
 		scan.close();
-
 	}
 
 	// 引数の配列のidxからn個分値を消去するメソッド
@@ -56,7 +55,6 @@ public class e_07_19 {
 			if (i > n) {
 				// iからn個引いたインデックスの配列に今の要素番号の値を代入する
 				a[i - n] = a[i];
-
 			}
 		}
 	}
