@@ -20,9 +20,10 @@ public class e_06_18 {
 		//arrayAの配列本体を作るとともにいくつの要素があるのかキーボードから読みっとった値を代入
 		arrayA = new int[lineCount][];
 		int columnCount = 0;		//arrayAの何行目にいくつの構成要素があるのかという値を初期値0で生成
+		int arrayALong = arrayA.length; //arrayAの長さを取っておく
 
 		//arrayA[lineCount]の各行の中にいくつの要素があるのかを入れる
-		for (int i = 0; i < arrayA.length; i++) {
+		for (int i = 0; i < arrayALong; i++) {
 			//i行目の構成要素がいくつあるのか代入を促す
 			System.out.print(i + "行の列数：");
 			//構成要素数をキーボードから取得する
@@ -32,9 +33,9 @@ public class e_06_18 {
 		}
 
 		//arrayAの各行各列の中にどんな値を入れるのかを求めるため、0行目からarrayAの構成要素数まで繰り返す
-		for (int i = 0; i < arrayA.length; i++) {
+		for (int i = 0; i < arrayALong; i++) {
 			//i行目の各列に値を入れていくので、i行目の構成要素数まで繰り返す
-			for (int j = 0; j < arrayA[i].length; j++) {
+			for (int j = 0; j < arrayALong; j++) {
 				//arrayAのi行目j列目にいくつの値を入れるのか入力を促す
 				System.out.print("配列a[" + i + "][" + j + "]の値：");
 				//各行列の要素の値をキーボードから入力
@@ -45,9 +46,9 @@ public class e_06_18 {
 
 		}
 		//最後に生成されたarrayAの多次元配列を表示するため、i行分繰り返す
-		for (int i = 0; i < arrayA.length; i++) {
+		for (int i = 0; i < arrayALong; i++) {
 			//i行目のj列分繰り返し値を表示するため、arrayAのi行の要素数分繰り返す
-			for (int j = 0; j < arrayA[i].length; j++) {
+			for (int j = 0; j < arrayA[i]Long; j++) {
 				//i行j列の値を、間隔を揃えるため最低でも3桁で表示する
 				System.out.printf("%3d", arrayA[i][j]);
 			}
