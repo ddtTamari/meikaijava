@@ -39,13 +39,10 @@ public class e_07_08 {
 			value = a;
 			// bがaより大きい場合はbまでのランダムな値を変数valueに代入
 		} else {
-			// 変数valueに0～bまでのランダムな値を代入
-			value = rand.nextInt(b);
-			// valueがaより小さい間、繰り返しランダムな値を代入する
-			while (value < a) {
-				// valueにbまでのランダムな値を代入
-				value = rand.nextInt(b);
-			}
+
+			// 変数valueにb-aまでの値のランダムな値を先に出しそのあとaを足すことでa~bまでのランダムな値を代入
+			value = rand.nextInt(b - a) + a;
+
 		}
 		// valueの値を返却する
 		return value;
