@@ -34,13 +34,15 @@ public class e_07_26 {
 		System.out.print("何の値をいれますか：");
 		// 何の値を挿入するのかキーボードからインデックス番号を取得
 		int increaseValue = scan.nextInt();
-		// arrayInsOfメソッドで作られた配列の長さを格納しておく
-		int arrayInsOfLong = arrayInsOf(array1, index, increaseValue).length;
+		// arrayInsOfメソッドで作られた配列を格納しておく
+		int[] arrayInsOfLong = arrayInsOf(array1, index, increaseValue);
+		// 格納した配列の長さを格納しておく
+		int arrayInsOfLength = arrayInsOfLong.length;
 
 		// 返却された配列の要素数分を表示するために繰り返し行う
-		for (int i = 0; i < arrayInsOfLong; i++) {
+		for (int i = 0; i < arrayInsOfLength; i++) {
 			// 入力したindexの要素にinvreaseValueの値を入れる配列を返却するメソッドを呼び出し、その値を表示する
-			System.out.println("a[" + i + "]:" + arrayInsOf(array1, index, increaseValue)[i]);
+			System.out.println("a[" + i + "]:" + arrayInsOfLong[i]);
 		}
 
 		// ストリームを解放する
@@ -48,7 +50,7 @@ public class e_07_26 {
 	}
 
 	// 実引数のidx番目の要素を削除した配列を生成するメソッド
-	static int[] arrayInsOf(int[] a, int idx, int x) {
+	private static int[] arrayInsOf(int[] a, int idx, int x) {
 		// 配列aの長さを変数として保管
 		int aLong = a.length;
 		// 配列arrayRemoveは配列aの要素を一つ削除しているので一つ少ない要素数になる
