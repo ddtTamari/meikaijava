@@ -15,20 +15,20 @@ public class e_07_15 {
 		// いくつの要素がある配列なのか要素数の入力を促す
 		System.out.print("いくつの要素がある配列を作りますか：");
 		// 要素の数をキーボードから入力
-		int elements = scan.nextInt();
-		// すべての要素の値を足す配列を要素数elementsで生成
-		int[] arrayA = new int[elements];
+		int elementsNumber = scan.nextInt();
+		// すべての要素の値を足す配列を要素数elementsNumberで生成
+		int[] arraySum = new int[elementsNumber];
 
 		// 入力された要素の数だけ繰り返し表示し入力を求める
-		for (int i = 0; i < elements; i++) {
+		for (int i = 0; i < elementsNumber; i++) {
 			// 何個目かの要素にいれる値の入力を促す
 			System.out.print(i + "個目の要素の値は：");
 			// 配列i個目の要素にキーボードから値を入力
-			arrayA[i] = scan.nextInt();
+			arraySum[i] = scan.nextInt();
 		}
 
 		// 合計を求めるメソッドを呼び出し、その値を表示する
-		System.out.println("要素の最小値：" + sumOf(arrayA));
+		System.out.println("要素の最小値：" + sumOf(arraySum));
 		// ストリームを解放する
 		scan.close();
 	}
