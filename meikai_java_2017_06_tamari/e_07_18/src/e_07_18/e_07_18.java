@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class e_07_18 {
 	public static void main(String[] args) {
+		// キーボードから値を取得するためのスキャナー
 		Scanner scan = new Scanner(System.in);
 
 		// これから生成する配列の要素数の入力を求める
@@ -26,7 +27,7 @@ public class e_07_18 {
 			arrayA[i] = scan.nextInt();
 		}
 		// 何個目の要素の値を消すか入力を求める
-		System.out.print("何個目の値を消しますか：");
+		System.out.print("何番目の要素の値を消しますか：");
 		// 何個目の要素を消すのかキーボードからインデックス番号を取得
 		int index = scan.nextInt();
 		// 指定した要素の値を消すメソッド
@@ -44,7 +45,7 @@ public class e_07_18 {
 
 	// 指定した要素の値を消しその後方の値を一つずつ前に動かすメソッド
 	static void aryRmv(int[] a, int idx) {
-		// 配列の長さの分だけ繰り返し行う
+		// 引数として受け取った配列の長さの分だけ繰り返し行う
 		for (int i = 0; i < a.length; i++) {
 			// 消す要素より要素番号が大きくなった場合その値を一個前の要素に代入する
 			if (i > idx) {
