@@ -39,23 +39,27 @@ public class e_08_02 {
 			System.out.print(Constant.Car_Move_Continue);
 			if (scan.nextInt() == 0) {
 				break;
-			}
-			System.out.print(Constant.Car_X_Move_Distance);
-			double dx = scan.nextDouble();
-			System.out.print(Constant.Car_Y_Move_Distance);
-			double dy = scan.nextDouble();
-
-			if (!myCar.move(dx, dy)) {
-				System.out.print(Constant.Car_Nomore_Fuel);
-				System.out.print(Constant.Car_Fuel_Refill);
-				if (scan.nextInt() == 1) {
-					System.out.print(Constant.Car_Howmany_Add);
-					double fuelRefill = scan.nextDouble();
-					myCar.addFuel(fuelRefill);
+			} else {
+				System.out.print(Constant.Car_X_Move_Distance);
+				double dx = scan.nextDouble();
+				System.out.print(Constant.Car_Y_Move_Distance);
+				double dy = scan.nextDouble();
+				if (!myCar.crashProbability()) {
+					System.out.println(Constant.Car_Crash);
+					break;
+				}
+				if (!myCar.move(dx, dy)) {
+					System.out.print(Constant.Car_Nomore_Fuel);
+					System.out.print(Constant.Car_Fuel_Refill);
+					if (scan.nextInt() == 1) {
+						System.out.print(Constant.Car_Howmany_Add);
+						double fuelRefill = scan.nextDouble();
+						myCar.addFuel(fuelRefill);
+					}
 				}
 			}
 		}
-
+		scan.close();
 	}
 
 }

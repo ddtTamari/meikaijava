@@ -5,11 +5,16 @@
  */
 package e_08_02;
 
+import java.util.Random;
+
 public class Car {
+	Random rand = new Random();
+
 	private String name;
 	private int width;
 	private int height;
 	private int length;
+	private int crash;
 	private double xCoordinate;
 	private double yCoordinate;
 	private double fuel;
@@ -46,6 +51,7 @@ public class Car {
 	double getFuel() {
 		if (tankCapacity < fuel) {
 			fuel = tankCapacity;
+			System.out.println(Constant.Car_Over_Fuel);
 			return fuel;
 		}
 		return fuel;
@@ -53,6 +59,14 @@ public class Car {
 
 	double addFuel(double add) {
 		return fuel += add;
+	}
+
+	boolean crashProbability() {
+		int crash = rand.nextInt(5);
+		if (crash > 3) {
+			return false;
+		}
+		return true;
 	}
 
 	boolean move(double dx, double dy) {
