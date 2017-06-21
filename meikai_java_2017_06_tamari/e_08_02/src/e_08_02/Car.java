@@ -14,13 +14,20 @@ public class Car {
 	private double yCoordinate;
 	private double fuel;
 	private double tankCapacity;
+	private double fuelConsumption;
+	private double fuelRefill;
+	private String plateNumber;
 
-	Car(String name, int width, int height, int length, double fuel) {
+	Car(String name, int width, int height, int length, String plateNumber, double tankCapacity, double fuel,
+			double fuelConsumption) {
 		this.name = name;
 		this.width = width;
 		this.height = height;
 		this.length = length;
+		this.plateNumber = plateNumber;
+		this.tankCapacity = tankCapacity;
 		this.fuel = fuel;
+		this.fuelConsumption = fuelConsumption;
 		xCoordinate = yCoordinate = 0.0;
 	}
 
@@ -32,12 +39,16 @@ public class Car {
 		return yCoordinate;
 	}
 
-	double getFuel() {
-		return fuel;
+	double getTankCapacity() {
+		return tankCapacity;
 	}
 
-	double getTankCapacity(){
-		return tankCapacity;
+	double getFuel() {
+		if (tankCapacity < fuel) {
+			fuel = tankCapacity;
+			return fuel;
+		}
+		return fuel;
 	}
 
 	boolean move(double dx, double dy) {
@@ -46,7 +57,7 @@ public class Car {
 		if (dist > fuel) {
 			return false;
 		} else {
-			fuel -= dist;
+			fuel -= dist / fuelConsumption;
 			xCoordinate += dx;
 			yCoordinate += dy;
 			return true;

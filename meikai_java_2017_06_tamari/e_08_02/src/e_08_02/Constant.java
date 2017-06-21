@@ -11,8 +11,10 @@ public class Constant {
 	public static final String Car_Width = new String("車幅は：");
 	public static final String Car_Height = new String("高さは：");
 	public static final String Car_Length = new String("長さは：");
+	public static final String Car_Plate_Number = new String("プレートナンバーは：");
+	public static final String Car_Fuel_Tank_Capacity = new String("タンク容量は：");
 	public static final String Car_Fuel_Remaining_Quantity = new String("ガソリン量は：");
-	public static final String Car_Fuel_Tank_Capacity = new String("ガソリン量は：");
+	public static final String Car_Fuel_Consumption = new String("燃費は：");
 	public static final String Car_X_Move_Distance = new String("x方向の移動距離：");
 	public static final String Car_Y_Move_Distance = new String("y方向の移動距離：");
 	public static final String Car_Current_Location = new String("現在地：");

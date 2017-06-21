@@ -21,12 +21,16 @@ public class e_08_02 {
 		int height = scan.nextInt();
 		System.out.print(Constant.Car_Length);
 		int length = scan.nextInt();
-		System.out.print(Constant.Car_Fuel_Remaining_Quantity);
-		double fuel = scan.nextDouble();
+		System.out.print(Constant.Car_Plate_Number);
+		String plateNumber = scan.next();
 		System.out.print(Constant.Car_Fuel_Tank_Capacity);
 		double tankCapacity = scan.nextDouble();
+		System.out.print(Constant.Car_Fuel_Remaining_Quantity);
+		double fuel = scan.nextDouble();
+		System.out.print(Constant.Car_Fuel_Consumption);
+		double fuelConsumption = scan.nextDouble();
 
-		Car myCar = new Car(name, width, height, length, fuel);
+		Car myCar = new Car(name, width, height, length, plateNumber, tankCapacity, fuel, fuelConsumption);
 
 		while (true) {
 			String Now_Position_And_Remaining_Fuel = String.format("現在地(%2.1f,%2.1f)・残り燃料：%3.1f", myCar.getX(),
