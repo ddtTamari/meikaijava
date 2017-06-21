@@ -11,6 +11,8 @@ public class Constant {
 	public static final String Car_Date_Prompt = new String("車のデータを入力せよ");
 	// 車の名前の入力を促すときに呼び出す
 	public static final String Car_Name = new String("名前は：");
+	// 車の経過年数の入力を促すときに呼び出す
+	public static final String Car_Elapsed_Years = new String("経過年数は：");
 	// 車の車幅の入力を促すときに呼び出す
 	public static final String Car_Width = new String("車幅は：");
 	// 車の高さの入力を促すときに呼び出す
