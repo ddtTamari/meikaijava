@@ -51,6 +51,10 @@ public class Car {
 		return fuel;
 	}
 
+	double addFuel(double add) {
+		return fuel += add;
+	}
+
 	boolean move(double dx, double dy) {
 		double dist = Math.sqrt(dx * dx + dy * dy);
 

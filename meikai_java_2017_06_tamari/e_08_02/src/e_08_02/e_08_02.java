@@ -36,7 +36,7 @@ public class e_08_02 {
 			String Now_Position_And_Remaining_Fuel = String.format("現在地(%2.1f,%2.1f)・残り燃料：%3.1f", myCar.getX(),
 					myCar.getY(), myCar.getFuel());
 			System.out.println(Now_Position_And_Remaining_Fuel);
-			System.out.println(Constant.Car_Move_Continue);
+			System.out.print(Constant.Car_Move_Continue);
 			if (scan.nextInt() == 0) {
 				break;
 			}
@@ -46,7 +46,13 @@ public class e_08_02 {
 			double dy = scan.nextDouble();
 
 			if (!myCar.move(dx, dy)) {
-				System.out.println(Constant.Car_Nomore_Fuel);
+				System.out.print(Constant.Car_Nomore_Fuel);
+				System.out.print(Constant.Car_Fuel_Refill);
+				if (scan.nextInt() == 1) {
+					System.out.print(Constant.Car_Howmany_Add);
+					double fuelRefill = scan.nextDouble();
+					myCar.addFuel(fuelRefill);
+				}
 			}
 		}
 

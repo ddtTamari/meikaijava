@@ -20,5 +20,7 @@ public class Constant {
 	public static final String Car_Current_Location = new String("現在地：");
 	public static final String Car_Move_Continue = new String("移動しますか[0…No/1…Yes]:");
 	public static final String Car_Nomore_Fuel = new String("燃料が足りません！！");
+	public static final String Car_Fuel_Refill = new String("給油しますか？[0…No/1…Yes]:");
+	public static final String Car_Howmany_Add = new String("どれくらい給油しますか：");
 
 }
