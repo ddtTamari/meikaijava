@@ -30,27 +30,37 @@ public class Account {
 
 	//名前を取得するメソッド
 	String getName() {
-		//名前のを返す
+		//名前フィールドの値を返す
 		return name;
 	}
 
+	//口座番号を取得するメソッド
 	String getNo() {
+		//口座番号フィールドの値を返す
 		return no;
 	}
 
+	//預金残高を取得するメソッド
 	long getBalance() {
+		//預金残高フィールドの値を返す
 		return balance;
 	}
 
+	//お金を預けるメソッド
 	void deposit(long k) {
+		//預金残高に金額を足す
 		balance += k;
 	}
 
+	//お金を引き出すメソッド
 	void withdraw(long k) {
+		//預金残高から引く
 		balance -= k;
 	}
 
+	//口座開設日の値を取得するメソッド
 	public Day getAccountOpeningDate() {
+		//口座開設日を返す
 		return new Day(accountOpeningDate);
 	}
 
