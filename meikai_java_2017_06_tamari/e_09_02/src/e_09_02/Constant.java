@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-package e_09_02;
-
-public class Constant {
-=======
 /*
   演習9-2		日付クラス第3版を利用するプログラムを作成せよ。すべてのコンストラクタの働きを確認できるようにすること。
   演習日		6月22日
   製作者		玉利仁美
  */
+
 package e_09_02;
 
 //文字列などの定数を保管しておくクラス
@@ -22,6 +18,5 @@ public class Constant {
 	public static final String What_Day = new String("日：");
 	// 何個目のコンストラクタの働きを確認しているかを表示する際に使用する
 	public static final String What_Number_Constructor = new String("個目のコンストラクタの実行例");
->>>>>>> parent of b880497... e_09_02のコミット
 
 }
