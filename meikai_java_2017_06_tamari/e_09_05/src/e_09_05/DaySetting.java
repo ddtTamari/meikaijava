@@ -28,7 +28,7 @@ public class DaySetting {
 	public DaySetting(int year, int month) {
 		// 引数が年だけの時の年の値を呼び出している
 		this(year);
-		// 月のフィールドに引数のmonthを代入
+		// 月のフィールドに引数のmonthを代入する
 		this.month = month;
 	}
 
