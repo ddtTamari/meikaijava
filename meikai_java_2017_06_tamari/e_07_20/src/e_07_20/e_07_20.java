@@ -38,24 +38,38 @@ public class e_07_20 {
 		// 指定した要素の場所に任意の値を挿入するメソッド
 		aryIns(arrayA, index, howMany);
 
-		// 配列の要素数分表示するために繰り返し行う
-		for (int i = 0; i < elements; i++) {
-			// 配列の各要素の値を表示する
-			System.out.println("a[" + i + "]:" + arrayA[i]);
-		}
 		// ストリームを解放する
 		scan.close();
 
 	}
 
+	//配列aの要素a[idx]にxを挿入するメソッド
 	static void aryIns(int[] a, int idx, int x) {
+		//配列Aより一つ要素数が長い配列を準備する
+		int[] arrayB = new int[a.length + 1];
 
+		//配列aの要素の値を入れていくのでaの要素数だけ繰り返す
 		for (int i = 0; i < a.length; i++) {
-
-			if (i == idx) {
-				a[i] = x;
+			//いれたい値を挿入する位置より小さい場合は配列aのi番目をそのまま配列bのi番目に入れる
+			if (i < idx) {
+				//配列aとbのi番目の要素の値は同じ値にする
+				arrayB[i] = a[i];
+				//挿入する位置に来た時、入れたい値を配列bに代入する
+			} else if (i == idx) {
+				//求める挿入位置に入れたい値を入れる
+				arrayB[i] = x;
+				//その次の要素に配列aのi番目の要素の値を入れる
+				arrayB[i + 1] = a[i];
+				//もし挿入したい位置よりi番目のほうが大きければi番目の要素を配列bのi番目の次の要素に入れる
+			} else {
+				//配列bには途中で一つ要素の値を追加したので要素番号iより一つ大きい要素に配列aのi番目の要素を代入する
+				arrayB[i + 1] = a[i];
 			}
-			a[i] = a[i + 1];
+		}
+		// 配列の要素数分表示するために繰り返し行う
+		for (int i = 0; i < arrayB.length; i++) {
+			// 配列の各要素の値を表示する
+			System.out.println("a[" + i + "]:" + arrayB[i]);
 		}
 
 	}
