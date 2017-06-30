@@ -33,13 +33,13 @@ public class e_15_03 {
 
 		// すべての要素に空白を入れるため配列の長さ分だけ繰り返す
 		for (int i = 0; i < stringOne.length(); i++) {
-			// 秘湯一つの要素に空白を代入
+			// 一つ一つの要素に空白を代入
 			setStringMached[i] = ' ';
 		}
 
 		// 一致した文字の配列の番号を格納するため文字列2の長さ分繰り返す
 		for (int j = 0; j < stringTwo.length(); j++) {
-			// 文字列1と一致した文字があればその番号を泣ければ‐1が入る
+			// 文字列1と一致した文字があればその番号をなければ‐1が入る
 			index[j] = stringOne.indexOf(stringTwo.charAt(j));
 		}
 
