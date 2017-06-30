@@ -23,7 +23,7 @@ public class e_10_03 {
 		int integerB = scan.nextInt();
 
 		// MinMaxクラスの二値の最小値を求めるメソッドを呼び出し結果を表示
-		System.out.println(Constant.TWO_NUMBER_MIN_DISPLAY + MinMax.Min(+integerA, integerB));
+		System.out.println(Constant.TWO_NUMBER_MIN_DISPLAY + MinMax.Min(integerA, integerB));
 		// MinMaxクラスの二値の最大値を求めるメソッドを呼び出し結果を表示
 		System.out.println(Constant.TWO_NUMBER_MAX_DISPLAY + MinMax.Max(integerA, integerB));
 
