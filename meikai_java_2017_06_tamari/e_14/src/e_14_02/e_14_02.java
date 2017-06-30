@@ -29,24 +29,11 @@ public class e_14_02 {
 		String masterName = scan.nextLine();
 		// ロボットペットのスキンの変更ができるロボットペットスキンクラスを、引数を入力された値で代入
 		RobotPetSkin rob = new RobotPetSkin(roboName, masterName);
+		// 自己紹介をするメソッドを呼び出す
 		rob.introduce();
 
-		// 最初は一回必ずスキン変更を通る
-		while (continueSkinChange == 1) {
-			// 初回か否かを判定、初期値は0なので一回目は通らない
-			if (countFirstOrOther != 0) {
-				// スキンの変更を続けるかどうか聞く
-				System.out.println("スキンの変更をつづけますか？はい...１/いいえ...０");
-				// 続けるかどうか1か0でキーボード入力を促す
-				continueSkinChange = scan.nextInt();
-				// 入力された値が1か0意外だったときもう一度入力を促す
-				while (continueSkinChange != 1 && continueSkinChange != 0) {
-					// スキンの変更を続けるかどうか聞く
-					System.out.println("スキンの変更をつづけますか？はい...１/いいえ...０");
-					// 続けるかどうか1か0でキーボード入力を促す
-					continueSkinChange = scan.nextInt();
-				}
-			}
+		// やめるかどうかの判定を入力した際1以外が入力されるまで繰り返す
+		do {
 			// 何色に変更するか質問する
 			System.out.println("0...漆黒/1...深紅/2...柳葉/3...露草/4...豹柄");
 			// スキン変更何番の番号の色にするか入力を促す
@@ -56,12 +43,14 @@ public class e_14_02 {
 
 			// スキンを変えるメソッドを呼び出す
 			rob.changeSkin(roboSkin);
+			// スキンの変更を続けるかどうか聞く
+			System.out.println("スキンの変更をつづけますか？はい...１/いいえ...1以外");
+			// 続けるかどうか1か0でキーボード入力を促す
+			continueSkinChange = scan.nextInt();
 
-			// 一回目が終わったのでカウントを1にする
-			countFirstOrOther = 1;
-		}
+			// 1が入力されている間は繰り返す
+		} while (continueSkinChange == 1);
 		// ストリームを解放する
 		scan.close();
 	}
-
 }
