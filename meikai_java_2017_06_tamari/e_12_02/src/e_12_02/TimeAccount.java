@@ -9,59 +9,65 @@ package e_12_02;
 
 //口座を意味するAccountクラスの定期預金残高を追加した派生クラスタイムアカウント
 public class TimeAccount extends Account {
-	//定期預金残高を用意
+	// 定期預金残高を用意
 	private long timeBalance = 0;
 
-	//タイムアカウントでは、アカウントのフィールドに定期預金残高を追加したコンストラクタ
+	// タイムアカウントでは、アカウントのフィールドに定期預金残高を追加したコンストラクタ
 	TimeAccount(String name, String number, long balance, long timeBalance) {
-		//アカウントの値を受け取る
+		// アカウントの値を受け取る
 		super(name, number, balance);
-		//タイムアカウントで追加した定期預金残高を受け取る
+		// タイムアカウントで追加した定期預金残高を受け取る
 		this.timeBalance = timeBalance;
 	}
 
-	//定期預金残高の値を取得するメソッド
+	// 定期預金残高の値を取得するメソッド
 	public long getTimeBalance() {
-		//定期預金残高を返す
+		// 定期預金残高を返す
 		return timeBalance;
 	}
 
-	//受け取ったアカウント型インスタンスの残高を比べて値を返すメソッド
+	// 受け取ったアカウント型インスタンスの残高を比べて値を返すメソッド
 	public static int compBalance(Account a, Account b) {
-		//アカウントAの合計残高
+		// アカウントAの合計残高
 		long totalTimeAccountA;
-		//アカウントBの合計残高
+		// アカウントBの合計残高
 		long totalTimeAccountB;
+		//aの口座残高のほうが大きいときに使う定数
+		int aBalanceMoreThanB = 1;
+		//bの口座残高のほうが大きいときに使う定数
+		int bBalanceMoreThanA = -1;
+		// aとbの口座残高が等しいときに使う定数
+		int aAndBBalanceEqual = 0;
 
-		//アカウントAがタイムアカウントの時、定期預金残高も計算しなければならないのでその処理のためのif文
+		// アカウントAがタイムアカウントの時、定期預金残高も計算しなければならないのでその処理のためのif文
 		if (a instanceof TimeAccount) {
-			//合計残高は普通預金と定期預金の合計額になる
+			// 合計残高は普通預金と定期預金の合計額になる
 			totalTimeAccountA = a.getBalance() + ((TimeAccount) a).getTimeBalance();
-			//タイムアカウント型でなければ定期預金残高は考慮しなくていいのでその処理を行う
+			// タイムアカウント型でなければ定期預金残高は考慮しなくていいのでその処理を行う
 		} else {
-			//合計残高は普通預金がそのまま入る
+			// 合計残高は普通預金がそのまま入る
 			totalTimeAccountA = a.getBalance();
 		}
-		//アカウントBがタイムアカウントの時、定期預金残高も計算しなければならないのでその処理のためのif文
+		// アカウントBがタイムアカウントの時、定期預金残高も計算しなければならないのでその処理のためのif文
 		if (b instanceof TimeAccount) {
-			//合計残高は普通預金と定期預金の合計額になる
+			// 合計残高は普通預金と定期預金の合計額になる
 			totalTimeAccountB = b.getBalance() + ((TimeAccount) b).getTimeBalance();
-			//タイムアカウント型でなければ定期預金残高は考慮しなくていいのでその処理を行う
+			// タイムアカウント型でなければ定期預金残高は考慮しなくていいのでその処理を行う
 		} else {
-			//合計残高は普通預金がそのまま入る
+			// 合計残高は普通預金がそのまま入る
 			totalTimeAccountB = b.getBalance();
 		}
 
-		//合計残高の比較を行い口座Aのほうが口座Bより小さければ
+		// 合計残高の比較を行い口座Aのほうが口座Bより小さければ
 		if (totalTimeAccountA < totalTimeAccountB) {
-			//－1を返す
-			return -1;
-			//口座Aのほうが口座Bより大きければ
+			// －1を返す
+			return bBalanceMoreThanA;
+			// 口座Aのほうが口座Bより大きければ
 		} else if (totalTimeAccountA > totalTimeAccountB) {
-			//1を返す
-			return 1;
+			// 1を返す
+			return aBalanceMoreThanB;
 		}
-		//そうでなければ合計は同じなので0を返す
-		return 0;
+		// そうでなければ合計は同じなので0を返す
+		return aAndBBalanceEqual;
 	}
 }
