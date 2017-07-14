@@ -27,47 +27,46 @@ public class TimeAccount extends Account {
 	}
 
 	// 受け取ったアカウント型インスタンスの残高を比べて値を返すメソッド
-	public static int compBalance(Account a, Account b) {
+	public static int compBalance(Account compareAccountA, Account compareAccountB) {
 		// アカウントAの合計残高
 		long totalTimeAccountA;
 		// アカウントBの合計残高
 		long totalTimeAccountB;
-		//aの口座残高のほうが大きいときに使う定数
-		int aBalanceMoreThanB = 1;
-		//bの口座残高のほうが大きいときに使う定数
-		int bBalanceMoreThanA = -1;
-		// aとbの口座残高が等しいときに使う定数
-		int aAndBBalanceEqual = 0;
+		// どちらが大きいかを返すための変数
+		int whichBalanceIsLarger;
 
 		// アカウントAがタイムアカウントの時、定期預金残高も計算しなければならないのでその処理のためのif文
-		if (a instanceof TimeAccount) {
+		if (compareAccountA instanceof TimeAccount) {
 			// 合計残高は普通預金と定期預金の合計額になる
-			totalTimeAccountA = a.getBalance() + ((TimeAccount) a).getTimeBalance();
+			totalTimeAccountA = compareAccountA.getBalance() + ((TimeAccount) compareAccountA).getTimeBalance();
 			// タイムアカウント型でなければ定期預金残高は考慮しなくていいのでその処理を行う
 		} else {
 			// 合計残高は普通預金がそのまま入る
-			totalTimeAccountA = a.getBalance();
+			totalTimeAccountA = compareAccountA.getBalance();
 		}
 		// アカウントBがタイムアカウントの時、定期預金残高も計算しなければならないのでその処理のためのif文
-		if (b instanceof TimeAccount) {
+		if (compareAccountB instanceof TimeAccount) {
 			// 合計残高は普通預金と定期預金の合計額になる
-			totalTimeAccountB = b.getBalance() + ((TimeAccount) b).getTimeBalance();
+			totalTimeAccountB = compareAccountB.getBalance() + ((TimeAccount) compareAccountB).getTimeBalance();
 			// タイムアカウント型でなければ定期預金残高は考慮しなくていいのでその処理を行う
 		} else {
 			// 合計残高は普通預金がそのまま入る
-			totalTimeAccountB = b.getBalance();
+			totalTimeAccountB = compareAccountB.getBalance();
 		}
 
 		// 合計残高の比較を行い口座Aのほうが口座Bより小さければ
 		if (totalTimeAccountA < totalTimeAccountB) {
 			// －1を返す
-			return bBalanceMoreThanA;
+			whichBalanceIsLarger = -1;
 			// 口座Aのほうが口座Bより大きければ
 		} else if (totalTimeAccountA > totalTimeAccountB) {
 			// 1を返す
-			return aBalanceMoreThanB;
+			whichBalanceIsLarger = 1;
+		} else {
+			// そうでなければ合計は同じなので0を返す
+			whichBalanceIsLarger = 0;
 		}
-		// そうでなければ合計は同じなので0を返す
-		return aAndBBalanceEqual;
+		// どちらが大きいか返す
+		return whichBalanceIsLarger;
 	}
 }
