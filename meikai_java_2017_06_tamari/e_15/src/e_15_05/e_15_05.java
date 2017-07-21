@@ -15,16 +15,27 @@ public class e_15_05 {
 		// コンピュータ２を生成
 		AllPlayer computer2 = new ComputerPlayer();
 
-		// プレイヤーとコンピューター1の勝負の結果を入れるための変数(以下、一回目の勝負)
+		//勝ってるか判断するときの勝利の時の条件の数字の一つ目
+		int winNumberOne = -1;
+		//勝ってるか判断するときの勝利の時の条件の数字の二つ目
+		int winNumberTwo = 2;
+		//勝ってるか判断するときの負けの時の条件の数字の一つ目
+		int loseNumberOne = 1;
+		//勝ってるか判断するときの負けの時の条件の数字の二つ目
+		int loseNumberTwo = -2;
+		//勝ってるか判断するときのあいこの時の条件の数字
+		int drawNumber = 0;
+
+		// プレイヤーとコンピューター1の勝負の結果を入れるための変数(以降、一回目の勝負)
 		int judgeGameOne;
-		// プレイヤーとコンピューター2の勝負の結果を入れるための変数(以下、二回目の勝負)
+		// プレイヤーとコンピューター2の勝負の結果を入れるための変数(以降、二回目の勝負)
 		int judgeGameTwo;
 		// プレイヤーが勝った時のフラグ
-		int playerWin = 0x01;
+		int playerWin = 1;
 		// コンピューター1が勝った時のフラグ
-		int computer1Win = 0x02;
+		int computer1Win = 2;
 		// コンピューター2が勝った時のフラグ
-		int computer2Win = 0x04;
+		int computer2Win = 4;
 		// 勝った人が誰なのか入れる変数
 		int winner = 0;
 		// プレイヤーの出す手を入れとく変数
@@ -40,41 +51,41 @@ public class e_15_05 {
 			judgeGameTwo = playerHands - computer2.getHandShape();
 
 			// プレイヤーがコンピュータ1に勝った時の処理
-			if (judgeGameOne == -1 || judgeGameOne == 2) {
+			if (judgeGameOne == winNumberOne || judgeGameOne == winNumberTwo) {
 				// プレイヤーが勝ったので勝ったフラグを立てる
 				winner = winner | playerWin;
 				// プレイヤーとコンピューター2の勝負でplayerが負けた時の処理
-				if (judgeGameTwo == 1 || judgeGameTwo == -2) {
+				if (judgeGameTwo == loseNumberOne || judgeGameTwo == loseNumberTwo) {
 					// プレイヤーが一回勝って一回負けるときはあいこになるのでプレイヤー勝ちフラグを下げる
-					winner = winner & 0;
+					winner = winner & drawNumber;
 					// プレイヤーとコンピューター2の勝負があいこだった時の処理
-				} else if (judgeGameTwo == 0) {
+				} else if (judgeGameTwo == drawNumber) {
 					// コンピューター2はコンピューター1に勝っていることになるので勝者にコンピュータ2の勝ちフラグを立てる
 					winner = winner | computer2Win;
 				}
 				// 一回目の勝負で引き分けだった時
-			} else if (judgeGameOne == 0) {
+			} else if (judgeGameOne == drawNumber) {
 				// 二回目の勝負でplayerが勝った時
-				if (judgeGameTwo == -1 || judgeGameTwo == 2) {
+				if (judgeGameTwo == loseNumberOne || judgeGameTwo == loseNumberTwo) {
 					// プレイヤーとコンピュータ1は引き分けなので、その二人の勝ちフラグを立てる
 					winner = winner | playerWin | computer1Win;
 					// 二回目の勝負に負けた時
-				} else if (judgeGameTwo == 1 || judgeGameTwo == -2) {
+				} else if (judgeGameTwo == loseNumberOne || judgeGameTwo == loseNumberTwo) {
 					// 勝者はコンピュータ2になる
 					winner = winner | computer2Win;
 				}
 				// 一回目の勝負で負けた時の処理
-			} else if (judgeGameOne == 1 || judgeGameOne == -2) {
+			} else if (judgeGameOne == loseNumberOne || judgeGameOne == loseNumberTwo) {
 				// コンピュータ1が勝ったのでコンピュータ１の勝ちフラグを立てる
 				winner = winner | computer1Win;
 				// 二回目の勝負で負けた時の処理
-				if (judgeGameTwo == 1 || judgeGameTwo == -2) {
+				if (judgeGameTwo == loseNumberOne || judgeGameTwo == loseNumberTwo) {
 					// 勝者にコンピュータ2も加える
 					winner = winner | computer2Win;
 					// 二回目の勝負で勝った時の処理
-				} else if (judgeGameTwo == -1 || judgeGameTwo == 2) {
+				} else if (judgeGameTwo == winNumberOne || judgeGameTwo == winNumberTwo) {
 					// 一回負けて一回勝った時はあいこになるので今まで勝ってた人のフラグを下げる
-					winner = winner & 0;
+					winner = winner & drawNumber;
 				}
 			}
 
@@ -90,27 +101,27 @@ public class e_15_05 {
 				// プレイヤー勝ちフラグが立っているときの処理
 				if ((winner & playerWin) != 0) {
 					// あなたと表示
-					System.out.println("あなた　");
+					System.out.print("あなた　");
 				}
 				// コンピューター1の勝ちフラグが立っているときの処理
 				if ((winner & computer1Win) != 0) {
 					// コンピューター1と表示
-					System.out.println("computer1　");
+					System.out.print("computer1　");
 				}
 				// コンピュータ2の勝ちフラグが立っているときの処理
 				if ((winner & computer2Win) != 0) {
 					// コンピュータ2と表示
-					System.out.println("computer2　");
+					System.out.print("computer2　");
 				}
 				// 表示した勝者の勝ちであると表示する
 				System.out.println("の勝ちです！");
 				// あいこの時
 			} else {
 				// あいこであると表示
-				System.out.println("あいこです");
+				System.out.println("あいこで?");
 			}
 			// あいこの間繰り返す
-		} while (winner == 0);
+		} while (winner == drawNumber);
 	}
 
 }

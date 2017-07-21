@@ -11,8 +11,16 @@ import java.util.Random;
 //コンピューターのだす手を決めるメソッド
 public class ComputerPlayer extends AllPlayer {
 	// 出す手を入れておく変数
-	int handShape;
+	private int handShape;
+	// グーかどうかを判定する数字
+	private int handShapeIsGu = 1;
+	// チョキかどうかを判定する数字
+	private int handShapeIsChoki = 2;
+	// パーかどうかを判定する数字
+	private int handShapeIsPa = 3;
 
+	// オーバーライドされているか確認
+	@Override
 	// コンピュータが出す手の形を決めるメソッド
 	public int getHandShape() {
 		// ランダムな値を入れるため宣言
@@ -23,18 +31,20 @@ public class ComputerPlayer extends AllPlayer {
 		return handShape;
 	}
 
+	// オーバーライドされているか確認
+	@Override
 	// 出した手の形を表示するメソッド
 	public void displayHandShape() {
 		// もし入力された値が1ならグー
-		if (this.handShape == 1) {
+		if (this.handShape == handShapeIsGu) {
 			// グーを出したことを表示
 			System.out.println("コンピューターの出した手はグーです。");
 			// もし入力された値が2ならチョキ
-		} else if (this.handShape == 2) {
+		} else if (this.handShape == handShapeIsChoki) {
 			// チョキを出されたことを表示
 			System.out.println("コンピューターの出した手はチョキです。");
 			// 3が入力されたならパー
-		} else if (this.handShape == 3) {
+		} else if (this.handShape == handShapeIsPa) {
 			// パーが出されたことを表示
 			System.out.println("コンピューターの出した手はパーです。");
 		}
