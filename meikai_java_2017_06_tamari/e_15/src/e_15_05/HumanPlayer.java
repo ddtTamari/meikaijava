@@ -13,11 +13,11 @@ public class HumanPlayer extends AllPlayer {
 	// 出す手をキーボードから取得
 	private int handShape;
 	// グーかどうかを判定する数字
-	private int handShapeIsGu = 1;
+	private static final int HAND_SHAPE_IS_GU = 1;
 	// チョキかどうかを判定する数字
-	private int handShapeIsChoki = 2;
+	private static final int HAND_SHAPE_IS_CYOKI = 2;
 	// パーかどうかを判定する数字
-	private int handShapeIsPa = 3;
+	private static final int HAND_SHAPE_IS_PA = 3;
 
 	// オーバーライドされているか確認
 	@Override
@@ -42,15 +42,15 @@ public class HumanPlayer extends AllPlayer {
 	// 入力した数字によってどの手を出したかを表示するメソッド
 	public void displayHandShape() {
 		// もし1を入力したらグーを出したことになる
-		if (this.handShape == handShapeIsGu) {
+		if (this.handShape == HAND_SHAPE_IS_GU) {
 			// グーを出したと表示
 			System.out.println("あなたの出した手はグーです。");
 			// もし2を入力したらチョキを出したことになる
-		} else if (this.handShape == handShapeIsChoki) {
+		} else if (this.handShape == HAND_SHAPE_IS_CYOKI) {
 			// チョキを出したと表示
 			System.out.println("あなたの出した手はチョキです。");
 			// もし3を入力したらパーを出したことになる
-		} else if (this.handShape == handShapeIsPa) {
+		} else if (this.handShape == HAND_SHAPE_IS_PA) {
 			// パーを出したと表示
 			System.out.println("あなたの出した手はパーです。");
 		}

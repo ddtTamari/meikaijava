@@ -13,11 +13,20 @@ public class ComputerPlayer extends AllPlayer {
 	// 出す手を入れておく変数
 	private int handShape;
 	// グーかどうかを判定する数字
-	private int handShapeIsGu = 1;
+	private int HAND_SHAPE_IS_GU = 1;
 	// チョキかどうかを判定する数字
-	private int handShapeIsChoki = 2;
+	private int HAND_SHAPE_IS_CYOKI = 2;
 	// パーかどうかを判定する数字
-	private int handShapeIsPa = 3;
+	private int HAND_SHAPE_IS_PA = 3;
+
+	// 何番目まで番号を与えたか判定する番号
+	private static int counter;
+	// 何番目のコンピュータなのか判定する番号
+	private int computerNumber;
+
+	public ComputerPlayer() {
+		computerNumber = ++counter;
+	}
 
 	// オーバーライドされているか確認
 	@Override
@@ -36,17 +45,17 @@ public class ComputerPlayer extends AllPlayer {
 	// 出した手の形を表示するメソッド
 	public void displayHandShape() {
 		// もし入力された値が1ならグー
-		if (this.handShape == handShapeIsGu) {
+		if (this.handShape == HAND_SHAPE_IS_GU) {
 			// グーを出したことを表示
-			System.out.println("コンピューターの出した手はグーです。");
+			System.out.println("コンピューター" + computerNumber + "の出した手はグーです。");
 			// もし入力された値が2ならチョキ
-		} else if (this.handShape == handShapeIsChoki) {
+		} else if (this.handShape == HAND_SHAPE_IS_CYOKI) {
 			// チョキを出されたことを表示
-			System.out.println("コンピューターの出した手はチョキです。");
+			System.out.println("コンピューター" + computerNumber + "の出した手はチョキです。");
 			// 3が入力されたならパー
-		} else if (this.handShape == handShapeIsPa) {
+		} else if (this.handShape == HAND_SHAPE_IS_PA) {
 			// パーが出されたことを表示
-			System.out.println("コンピューターの出した手はパーです。");
+			System.out.println("コンピューター" + computerNumber + "の出した手はパーです。");
 		}
 	}
 }
