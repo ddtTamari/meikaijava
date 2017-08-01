@@ -53,13 +53,13 @@ public class DisplayCalendar {
 	}
 
 	// 年と月を与えられた時のメソッド
-	public void whatTypeCalendarPrint(int mImputYear, int mImputMonth) {
+	public void whatTypeCalendarPrint(int imputYear, int imputMonth) {
 		// 与えられた引数の年を設定する
-		calenderDisplay.set(Calendar.YEAR, mImputYear);
+		calenderDisplay.set(Calendar.YEAR, imputYear);
 		// 与えられた引数の月を設定する
-		calenderDisplay.set(Calendar.MONTH, mImputMonth);
+		calenderDisplay.set(Calendar.MONTH, imputMonth);
 		// 表示するカレンダーの月を表示させる、その時日付の中心に月が表示するよう11桁で表示
-		System.out.printf("%11d\n", (mImputMonth + Constant.ARRAY_NUMBER_ADJUSTMENT_REAL_NUMBER));
+		System.out.printf("%11d\n", (imputMonth + Constant.ARRAY_NUMBER_ADJUSTMENT_REAL_NUMBER));
 		// 日付を表示するメソッドを呼び出す
 		printCalenderDate();
 

@@ -24,10 +24,13 @@ public class e_15_08 {
 			calender.whatTypeCalendarPrint(Integer.parseInt(args[Constant.COMAND_LINE_ARGUMENT_YEAR]));
 			// コマンドライン引数が2つの時はそれを年と月としてカレンダーを表示する
 		} else if (args.length == Constant.RECIVE_ARGUMENT_YEAR_MONTH) {
+			// 受け取ったコマンドライン引数の月の値をとっておく
+			int whatCalendarDisplayMonth = Integer.parseInt(args[Constant.COMAND_LINE_ARGUMENT_MONTH])
+					- Constant.ARRAY_NUMBER_ADJUSTMENT_REAL_NUMBER;
+			// 受け取ったコマンドライン引数の年の値をとっておく
+			int whatCalendarDisplayYear = Integer.parseInt(args[Constant.COMAND_LINE_ARGUMENT_YEAR]);
 			// 引数として受け取った年の月のカレンダーを表示するメソッドを呼び出す
-			calender.whatTypeCalendarPrint(Integer.parseInt(args[Constant.COMAND_LINE_ARGUMENT_YEAR]),
-					(Integer.parseInt(args[Constant.COMAND_LINE_ARGUMENT_MONTH])
-							- Constant.ARRAY_NUMBER_ADJUSTMENT_REAL_NUMBER));
+			calender.whatTypeCalendarPrint(whatCalendarDisplayYear, whatCalendarDisplayMonth);
 		}
 
 	}
