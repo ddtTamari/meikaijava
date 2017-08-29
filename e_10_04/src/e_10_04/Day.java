@@ -18,7 +18,7 @@ public class Day {
 	// 現在の年でフィールドを初期化しておく
 	private int mYear = calendarDate.get(YEAR);
 	// 現在の月でフィールドを初期化しておく
-	private int mMonth = calendarDate.get(MONTH) + Constant.ADJUST_MONTH;
+	private int mMonth = calendarDate.get(MONTH);// + Constant.ADJUST_MONTH;
 	// 現在の日にちでフィールドを初期化しておく
 	private int mDate = calendarDate.get(DATE);
 
@@ -72,15 +72,15 @@ public class Day {
 		// もし与えられた月が12より大きければ
 		if (month > Constant.MAX_MONTH_OF_YEAR) {
 			// 12を代入
-			this.mMonth = Constant.MAX_MONTH_OF_YEAR;
+			this.mMonth = Constant.MAX_MONTH_OF_YEAR - Constant.ADJUST_MONTH;
 			// 与えられた月が1より小さければ
-		} else if (month < Constant.MIN_MONTH_OF_YEAR) {
+		} else if (month < Constant.MIN_MONTH_OF_YEAR - Constant.ADJUST_MONTH) {
 			// 1を代入
-			this.mMonth = Constant.MIN_MONTH_OF_YEAR;
+			this.mMonth = Constant.MIN_MONTH_OF_YEAR - Constant.ADJUST_MONTH;
 			// それ以外ならば
 		} else {
 			// 与えられた月をそのまま代入
-			this.mMonth = month;
+			this.mMonth = month - Constant.ADJUST_MONTH;
 		}
 	}
 
@@ -136,7 +136,7 @@ public class Day {
 		// 年をフィールドの年に設定する
 		calendarDate.set(YEAR, this.mYear);
 		// 月を引数として与えられた月で設定する
-		calendarDate.set(MONTH, month);
+		calendarDate.set(MONTH, month + Constant.ADJUST_MONTH);
 		// 現在の日付が与えられた月の最大日数より多きい場合次の月になってしまうので1日に設定する
 		calendarDate.set(DATE, Constant.FIRST_DAY_OF_MONTH);
 		// 与えられた月の最大日数を求める
