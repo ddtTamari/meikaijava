@@ -18,7 +18,7 @@ public class Day {
 	// 現在の年でフィールドを初期化しておく
 	private int mYear = calendarDate.get(YEAR);
 	// 現在の月でフィールドを初期化しておく
-	private int mMonth = calendarDate.get(MONTH);// + Constant.ADJUST_MONTH;
+	private int mMonth = calendarDate.get(MONTH);
 	// 現在の日にちでフィールドを初期化しておく
 	private int mDate = calendarDate.get(DATE);
 
