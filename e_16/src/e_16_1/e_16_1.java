@@ -14,9 +14,9 @@ import java.util.Scanner;
 //問題を解くためのクラスを宣言
 public class e_16_1 {
 	//どちらの例外処理に投げるか判定するための数字
-	private final static int CASE_ONE_GOTO_EXCEPTION = 1;
+	private final static int CASE_GOTO_EXCEPTION = 1;
 	//どちらの例外処理に投げるか判定するための数字
-	private final static int CASE_TWO_GOTO_RUNTIME_EXCEPTION = 2;
+	private final static int CASE_GOTO_RUNTIME_EXCEPTION = 2;
 
 	// 検査例外発生を表示させるException例外ハンドラを作成する
 	static void throwsException(int caseNumber) throws Exception {
@@ -35,11 +35,11 @@ public class e_16_1 {
 		// 引数に与えられた数字によって呼び出す例外ハンドラを決める
 		switch (branch) {
 		// 引数が1だった場合問題に従ってException例外処理を呼び出す
-		case CASE_ONE_GOTO_EXCEPTION:
+		case CASE_GOTO_EXCEPTION:
 			//例外の処理を呼び出す
 			throwsException(branch);
 			// 引数が2だった場合問題に従ってRuntimeException例外処理を呼び出す
-		case CASE_TWO_GOTO_RUNTIME_EXCEPTION:
+		case CASE_GOTO_RUNTIME_EXCEPTION:
 			//例外の処理を呼び出す
 			throwsRuntimeException(branch);
 		}
