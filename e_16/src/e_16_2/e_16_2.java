@@ -11,6 +11,13 @@ import java.util.Scanner;
 
 //非検査例外のルールを決めるために抽象クラスを作成する
 class RangeError extends RuntimeException {
+
+	/**
+	 * 例外処理を行う際のルールを決めるコンストラクタ
+	 * @author 玉利仁美
+	 * @param inputNum ユーザが入力した値
+	 * @param coation 例外が起きた際に表示される文言
+	 */
 	// コーションとエラーのある値を表示するためのコンストラクタを作成
 	RangeError(int inputNum, String coation) {
 		//注意文と範囲外の値を表示する処理をおこなう
@@ -22,6 +29,11 @@ class RangeError extends RuntimeException {
 
 //入力された値が範囲外だった時の例外処理クラス
 class ParameterRangeError extends RangeError {
+	/**
+	 * 入力された値が例外だった時の処理を行うメソッド
+	 * @author 玉利仁美
+	 * @param inputNum ユーザが入力した値
+	 */
 	//入力された値を引数として例外処理を行う
 	ParameterRangeError(int inputNum) {
 		//コーション内容と例外の値を表示させる
@@ -33,6 +45,11 @@ class ParameterRangeError extends RangeError {
 
 //計算結果が範囲外だった時の例外処理クラス
 class ResultRangeError extends RangeError {
+	/**
+	 * 計算結果が例外だった時の処理を行うメソッド
+	 * @author 玉利仁美
+	 * @param resultNum 計算結果
+	 */
 	//計算結果が範囲外だっと時の計算結果を引数として例外処理を行う
 	ResultRangeError(int resultNum) {
 		//コーション内容と例外の値を表示させる
@@ -45,6 +62,12 @@ class ResultRangeError extends RangeError {
 //メインクラス
 public class e_16_2 {
 
+	/**
+	 * 入力された値が範囲外かどうか判定するメソッド
+	 * @author 玉利仁美
+	 * @param inputNum ユーザが入力した値
+	 * @return inputNumが0~9までの間だったらTrue
+	 */
 	//入力された値が範囲外かどうか判定するメソッド、エラー処理を行うため条件を指定する
 	static boolean isValid(int inputNum) {
 		//引数の値が0～9の間の場合判定はTRUEが返る
@@ -52,20 +75,28 @@ public class e_16_2 {
 	//入力された値が判定外かどうか判定するメソッドを閉じる
 	}
 
+	/**
+	 * @author 玉利仁美
+	 * @param inputIntegerA ユーザが入力した一つ目の値
+	 * @param inputIntegerB ユーザが入力した二つ目の値
+	 * @return result ユーザが入力した2つの値の合計値
+	 * @throws ParameterRangeError ユーザが入力した値が例外だった場合の処理
+	 * @throws ResultRangeError 二つの値の合計値が例外だった場合の処理
+	 */
 	//足し算の処理をおこなうメソッド、この問題では例外処理を発生させるためのメソッド
-	static int add(int a, int b) throws ParameterRangeError, ResultRangeError {
+	static int add(int inputIntegerA, int inputIntegerB) throws ParameterRangeError, ResultRangeError {
 		//入力された値でFalseが返ってきたら例外処理を行う
-		if (!isValid(a)) {
+		if (!isValid(inputIntegerA)) {
 			//入力された値が範囲外だった時の処理を行う
-			throw new ParameterRangeError(a);
+			throw new ParameterRangeError(inputIntegerA);
 		}
 		//入力された値でFalseが返ってきたら例外処理を行う
-		if (!isValid(b)) {
+		if (!isValid(inputIntegerB)) {
 			//入力された値が範囲外だった時の処理を行う
-			throw new ParameterRangeError(b);
+			throw new ParameterRangeError(inputIntegerB);
 		}
 		//変数を用意して足し算を行う
-		int result = a + b;
+		int result = inputIntegerA + inputIntegerB;
 		//計算結果が範囲外だった時のFalseが返ってきたら例外処理を行う
 		if (!isValid(result)) {
 			//計算結果が範囲外だった時の処理を行う
@@ -76,6 +107,11 @@ public class e_16_2 {
 
 	}
 
+	/**
+	 * ユーザーの入力した任意の値を足し算するメソッド
+	 * @author 玉利仁美
+	 * @param args コマンドライン引数
+	 */
 	//メインメソッド
 	public static void main(String[] args) {
 
