@@ -16,12 +16,12 @@ class RangeError extends RuntimeException {
 	 * 例外処理を行う際のルールを決めるコンストラクタ
 	 * @author 玉利仁美
 	 * @param inputNum ユーザが入力した値
-	 * @param coation 例外が起きた際に表示される文言
+	 * @param caution 例外が起きた際に表示される文言
 	 */
 	// コーションとエラーのある値を表示するためのコンストラクタを作成
-	RangeError(int inputNum, String coation) {
+	RangeError(int inputNum, String caution) {
 		//注意文と範囲外の値を表示する処理をおこなう
-		super(coation + "範囲外の値：" + inputNum);
+		super(caution + "範囲外の値：" + inputNum);
 	//コンストラクタを閉じる
 	}
 	//抽象クラスを閉じる
@@ -76,6 +76,7 @@ public class e_16_2 {
 	}
 
 	/**
+	 * 足し算の処理をおこなうメソッド
 	 * @author 玉利仁美
 	 * @param inputIntegerA ユーザが入力した一つ目の値
 	 * @param inputIntegerB ユーザが入力した二つ目の値
