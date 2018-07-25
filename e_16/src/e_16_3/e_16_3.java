@@ -7,47 +7,93 @@
  */
 package e_16_3;
 
+//ユーザが入力した値をとるためにスキャナークラスを呼び出す
 import java.util.Scanner;
 
+//メインクラス
 public class e_16_3 {
-	static void swap(int[] a, int idx1, int idx2) {
-		int t = a[idx1];
-		a[idx1] = a[idx2];
-		a[idx2] = t;
-	}
+    /**
+     * 配列の中に入っている要素を逆に並び替えるメソッド
+     * @author 柴田望洋
+     * @param array 入れ替えたい配列を示す引数
+     * @param idx1 要素を入れ替えるための配列の内の一つ目
+     * @param idx2 要素を入れ替えるための配列の内の二つ目
+     */
+    //配列の要素を入れ替えるメソッド
+    static void swap(int[] array, int idx1, int idx2) {
+        //一つ目の要素の値をとっておくための変数を用意する
+        int keepNum = array[idx1];
+        //一つ目の要素に二つ目の要素の値を代入して順番を変える
+        array[idx1] = array[idx2];
+        //二つ目の要素にはあらかじめとっておいた二つ目の要素の値を代入する
+        array[idx2] = keepNum;
+    }
 
-	static void reverse(int[] a) {
-		try {
-			for (int i = 0; i < a.length / 2; i++) {
-				swap(a, i, a.length - i);
-			}
-		} catch (ArrayIndexOutOfBoundsException e) {
-			e.printStackTrace();
-			System.exit(1);
-		} catch (NullPointerException e) {
-			e.printStackTrace();
-			System.exit(1);
-		}
-	}
+    /**
+     * 配列を入れ替えるための処理を行うメソッド
+     * @author 柴田望洋
+     * @param array 入れ替える配列を指定する
+     */
+    //配列を入れ替えるための処理を行うメソッド
+    static void reverse(int[] array) {
+        //この後の処理には例外が発生した際に例外処理を行うよう指定する
+        try {
+            //入れ替えるためには半分入れ替え処理を行えばいいので配列の長さの
+            for (int i = 0; i < array.length / 2; i++) {
+                //例外処理を起こすために要素数より多くなるようにして配列の並び替えメソッドを呼び出す
+                swap(array, i, array.length - i);
+            }
+            //インデックスが要素数より多くなった時キャッチする例外ハンドラ
+        } catch (ArrayIndexOutOfBoundsException error) {
+            //要素数より多くなった時のエラー内容を表示する
+            error.printStackTrace();
+            //システムが異常で終了したことを示す
+            System.exit(1);
+            //参照が空参照だった時キャッチする例外ハンドラ
+        } catch (NullPointerException error) {
+            //参照が空参照だったことを表示する
+            error.printStackTrace();
+            //システムが異常で終了したことを示す
+            System.exit(1);
+        }
+    }
 
-	public static void main(String[] args) {
-		Scanner stdIn = new Scanner(System.in);
+    /**
+     * @author 柴田望洋
+     * @param args コマンドライン引数
+     */
+    //メインメソッド
+    public static void main(String[] args) {
+        //ユーザが入力できるようにする
+        Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("要素数：");
-		int num = stdIn.nextInt();
+        //ユーザに要素数の入力を促す
+        System.out.print("要素数：");
+        //ユーザが入力した値を保持する
+        int num = stdIn.nextInt();
 
-		int[] x = new int[num];
+        //ユーザが入力した数の要素数を持つ配列を準備する
+        int[] array = new int[num];
 
-		for (int i = 0; i < num; i++) {
-			System.out.print("x[" + i + "] : ");
-			x[i] = stdIn.nextInt();
-		}
+        //ユーザが入力した数だけ配列に値を入力するために要素数分繰り返す
+        for (int i = 0; i < num; i++) {
+            //ユーザに配列の各要素の値の入力を促す
+            System.out.print("x[" + i + "] : ");
+            //各配列にキーボードから値を取得する
+            array[i] = stdIn.nextInt();
+        }
 
-		reverse(x);
+        //反転する処理を行うメソッドを呼び出す
+        reverse(array);
 
-		System.out.println("要素の並びを反転しました。");
-		for (int i = 0; i < num; i++) {
-			System.out.println("x[" + i + "] = " + x[i]);
-		}
-	}
+        //要素の反転ができたことを明示する
+        System.out.println("要素の並びを反転しました。");
+        //各要素の値を表示したいので要素数分繰り返す
+        for (int i = 0; i < num; i++) {
+            //各要素を反転した結果を表示する
+            System.out.println("x[" + i + "] = " + array[i]);
+        }
+        // ストリームを解放する
+        stdIn.close();
+    }
 }
