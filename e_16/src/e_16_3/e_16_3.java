@@ -20,7 +20,7 @@ public class e_16_3 {
      * @param idx2 要素を入れ替えるための配列の内の二つ目
      */
     //配列の要素を入れ替えるメソッド
-    static void swap(int[] array, int idx1, int idx2) {
+    static void swap(int[] array, int idx1, Integer idx2) {
         //一つ目の要素の値をとっておくための変数を用意する
         int keepNum = array[idx1];
         //一つ目の要素に二つ目の要素の値を代入して順番を変える
@@ -41,20 +41,16 @@ public class e_16_3 {
             //入れ替えるためには半分入れ替え処理を行えばいいので配列の長さの
             for (int i = 0; i < array.length / 2; i++) {
                 //例外処理を起こすために要素数より多くなるようにして配列の並び替えメソッドを呼び出す
-                swap(array, i, array.length - i);
+                swap(array, i + array.length, null);
             }
             //インデックスが要素数より多くなった時キャッチする例外ハンドラ
         } catch (ArrayIndexOutOfBoundsException error) {
             //要素数より多くなった時のエラー内容を表示する
             error.printStackTrace();
-            //システムが異常で終了したことを示す
-            System.exit(1);
             //参照が空参照だった時キャッチする例外ハンドラ
         } catch (NullPointerException error) {
             //参照が空参照だったことを表示する
             error.printStackTrace();
-            //システムが異常で終了したことを示す
-            System.exit(1);
         }
     }
 
@@ -70,7 +66,7 @@ public class e_16_3 {
         //ユーザに要素数の入力を促す
         System.out.print("要素数：");
         //ユーザが入力した値を保持する
-        int num = stdIn.nextInt();
+        Integer num = stdIn.nextInt();
 
         //ユーザが入力した数の要素数を持つ配列を準備する
         int[] array = new int[num];
