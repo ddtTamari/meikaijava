@@ -24,7 +24,7 @@ class RangeError extends RuntimeException {
         super(caution + "範囲外の値：" + inputNum);
         //コンストラクタを閉じる
     }
-    //抽象クラスを閉じる
+    //親クラスを閉じる
 }
 
 //入力された値が範囲外だった時の例外処理クラス
