@@ -20,7 +20,7 @@ public class e_16_3 {
      * @param idx2 要素を入れ替えるための配列の内の二つ目
      */
     //配列の要素を入れ替えるメソッド
-    static void swap(int[] array, int idx1, Integer idx2) {
+    static void swap(int[] array, int idx1, int idx2) {
         //一つ目の要素の値をとっておくための変数を用意する
         int keepNum = array[idx1];
         //一つ目の要素に二つ目の要素の値を代入して順番を変える
@@ -41,7 +41,7 @@ public class e_16_3 {
             //入れ替えるためには半分入れ替え処理を行えばいいので配列の長さの
             for (int i = 0; i < array.length / 2; i++) {
                 //例外処理を起こすために要素数より多くなるようにして配列の並び替えメソッドを呼び出す
-                swap(array, i + array.length, null);
+                swap(array, i, array.length - i);
             }
             //インデックスが要素数より多くなった時キャッチする例外ハンドラ
         } catch (ArrayIndexOutOfBoundsException error) {
@@ -66,28 +66,35 @@ public class e_16_3 {
         //ユーザに要素数の入力を促す
         System.out.print("要素数：");
         //ユーザが入力した値を保持する
-        Integer num = stdIn.nextInt();
+        int num = stdIn.nextInt();
 
         //ユーザが入力した数の要素数を持つ配列を準備する
-        int[] array = new int[num];
+        int[] arrayOutOf = new int[num];
+        //空参照を起こすための配列を準備する
+        int[] arrayNull;
+
+        //空参照のエラーを出すためにNullを代入する
+        arrayNull = null;
 
         //ユーザが入力した数だけ配列に値を入力するために要素数分繰り返す
         for (int i = 0; i < num; i++) {
             //ユーザに配列の各要素の値の入力を促す
             System.out.print("x[" + i + "] : ");
             //各配列にキーボードから値を取得する
-            array[i] = stdIn.nextInt();
+            arrayOutOf[i] = stdIn.nextInt();
         }
 
-        //反転する処理を行うメソッドを呼び出す
-        reverse(array);
+        //反転する処理を行うメソッドを呼び出す。この呼び出しでは要素数以上の数字を配列に入れ例外処理を起こす
+        reverse(arrayOutOf);
+        //反転する処理を行うメソッドを呼び出す。この呼び出しではNullを引数として渡すことでNULL用の例外処理を起こす
+        reverse(arrayNull);
 
         //要素の反転ができたことを明示する
         System.out.println("要素の並びを反転しました。");
         //各要素の値を表示したいので要素数分繰り返す
         for (int i = 0; i < num; i++) {
             //各要素を反転した結果を表示する
-            System.out.println("x[" + i + "] = " + array[i]);
+            System.out.println("x[" + i + "] = " + arrayOutOf[i]);
         }
         // ストリームを解放する
         stdIn.close();
