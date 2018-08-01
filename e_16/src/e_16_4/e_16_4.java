@@ -41,7 +41,7 @@ public class e_16_4 {
             //配列の半分の長さまで繰り返せばすべての要素を入れ替えられるのでそれまで繰り返す
             for (int i = 0; i < argsArray.length / 2; i++) {
                 //Nullの例外処理を発生させるため引数を空参照にする
-                swap(null, i, argsArray.length - i);
+                swap(argsArray, i, argsArray.length - i);
             }
             //要素数より多い数が入ったら発生させる例外処理
         } catch (ArrayIndexOutOfBoundsException autOfBoundsError) {
@@ -68,30 +68,32 @@ public class e_16_4 {
         //配列の要素数の入力を促す
         System.out.print("要素数；");
         //ユーザが入力した値を保持する
-        int inputElement = stdIn.nextInt();
+        int getElement = stdIn.nextInt();
 
-        //ユーザの入力した数の長さの配列を用意する
-        int[] array = new int[inputElement];
+        //Nullによる例外処理が行われない配列を用意する
+        int[] arrayOutOf = new int[getElement];
+        //Nullによる例外処理を行うための配列を用意する
+        int[] arrayNull;
 
         //配列の長さまで要素の中に値を入れたいのでその数まで繰り返す
-        for (int i = 0; i < inputElement; i++) {
+        for (int i = 0; i < getElement; i++) {
             //要素の値の入力を促す
             System.out.print("x[" + i + "] : ");
             //キーボードから値を取得する
-            array[i] = stdIn.nextInt();
+            arrayOutOf[i] = stdIn.nextInt();
         }
 
         //この後の処理に例外が発生した際に例外処理を行うよう指定する
         try {
-            //要素を反転させる処理を呼び出す
-            reverse(array);
+            //要素を反転させる処理Nullの例外処理を行うように呼び出す
+            reverse(null);
 
             //要素の並びを反転したことを表示する
             System.out.println("要素の並びを反転しました。");
             //反転した要素をすべて表示させるために
-            for (int i = 0; i < inputElement; i++) {
+            for (int i = 0; i < getElement; i++) {
                 //各要素の番号と値を表示する
-                System.out.println("x[" + i + "]=" + array[i]);
+                System.out.println("x[" + i + "]=" + arrayOutOf[i]);
             }
             //例外が発生した際に行う処理
         } catch (RuntimeException error) {
