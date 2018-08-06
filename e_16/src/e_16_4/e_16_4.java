@@ -68,19 +68,19 @@ public class e_16_4 {
         //配列の要素数の入力を促す
         System.out.print("要素数；");
         //ユーザが入力した値を保持する
-        int getElement = stdIn.nextInt();
+        int userDecidedElement = stdIn.nextInt();
 
         //Nullによる例外処理が行われない配列を用意する
-        int[] arrayOutOf = new int[getElement];
+        int[] arrayOutOfBounds = new int[userDecidedElement];
         //Nullによる例外処理を行うための配列を用意する
         int[] arrayNull;
 
         //配列の長さまで要素の中に値を入れたいのでその数まで繰り返す
-        for (int i = 0; i < getElement; i++) {
+        for (int i = 0; i < userDecidedElement; i++) {
             //要素の値の入力を促す
             System.out.print("x[" + i + "] : ");
             //キーボードから値を取得する
-            arrayOutOf[i] = stdIn.nextInt();
+            arrayOutOfBounds[i] = stdIn.nextInt();
         }
 
         //この後の処理に例外が発生した際に例外処理を行うよう指定する
@@ -91,9 +91,9 @@ public class e_16_4 {
             //要素の並びを反転したことを表示する
             System.out.println("要素の並びを反転しました。");
             //反転した要素をすべて表示させるために
-            for (int i = 0; i < getElement; i++) {
+            for (int i = 0; i < userDecidedElement; i++) {
                 //各要素の番号と値を表示する
-                System.out.println("x[" + i + "]=" + arrayOutOf[i]);
+                System.out.println("x[" + i + "]=" + arrayOutOfBounds[i]);
             }
             //例外が発生した際に行う処理
         } catch (RuntimeException error) {
